@@ -1,0 +1,468 @@
+/* About page base */
+.about-page {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+}
+
+/* Support both class and className usage in your snippet */
+.about-page[class~="rings"],
+.about-page.rings {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft gradient wash under everything */
+.about-page.rings::before {
+  content: "";
+  position: absolute;
+  inset: -18%;
+  background:
+    radial-gradient(900px 900px at 15% 20%, rgba(37,99,235,0.06), transparent 65%),
+    radial-gradient(800px 800px at 85% 70%, rgba(17,24,39,0.06), transparent 65%);
+  filter: blur(20px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Rotating halo rings, very mild */
+.about-page.rings::after {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  background:
+    repeating-conic-gradient(
+      from 0deg at 50% 50%,
+      rgba(2,132,199,0.05) 0deg,
+      rgba(2,132,199,0.05) 12deg,
+      rgba(99,102,241,0.05) 12deg,
+      rgba(99,102,241,0.05) 24deg
+    );
+  /* fade rings toward edges */
+  mask: radial-gradient(closest-side, rgba(255,255,255,0.85), transparent 72%);
+  -webkit-mask: radial-gradient(closest-side, rgba(255,255,255,0.85), transparent 72%);
+  opacity: 0.55;
+  animation: aboutRingsSpin 100s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Three soft, animated blobs you already added in JSX */
+.about-blob,
+.about-page .about-blob,
+.about-page [class~="about-blob"] {
+  position: absolute;
+  width: 40vmax;
+  height: 40vmax;
+  border-radius: 50%;
+  filter: blur(42px);
+  opacity: 0.16;
+  mix-blend-mode: soft-light;
+  transform: translateZ(0);
+  will-change: transform, border-radius;
+  z-index: 0;          /* behind content */
+  pointer-events: none;
+}
+
+/* Palette mapped to your theme (blue/cyan/gray) */
+.about-blob.blue    { background: radial-gradient(circle at 30% 30%, rgba(37,99,235,0.12), rgba(37,99,235,0.02)); }
+.about-blob.cyan    { background: radial-gradient(circle at 70% 40%, rgba(2,132,199,0.12), rgba(2,132,199,0.02)); }
+.about-blob.gray    { background: radial-gradient(circle at 50% 60%, rgba(17,24,39,0.10), rgba(17,24,39,0.02)); }
+
+/* Paths + morphing */
+.about-blob.b1 { top: -12%; left: -10%; animation: aboutPath1 60s ease-in-out infinite alternate, aboutMorph 36s ease-in-out infinite; }
+.about-blob.b2 { bottom: -16%; right: -12%; animation: aboutPath2 66s ease-in-out infinite alternate, aboutMorph 40s ease-in-out infinite reverse; }
+.about-blob.b3 { top: 30%; left: 55%; animation: aboutPath3 72s ease-in-out infinite alternate, aboutMorph 44s ease-in-out infinite; }
+
+/* Ensure real content sits above backgrounds */
+.about-page .container,
+.about-page .page-title,
+.about-page .about-hero,
+.about-page .skills-section,
+.about-page .education-section,
+.about-page .interests-section,
+.about-page .goals-section,
+.about-page .timeline {
+  position: relative;
+  z-index: 1;
+}
+
+/* Keyframes */
+@keyframes aboutRingsSpin {
+  0%   { transform: rotate(0deg) scale(1.02); }
+  100% { transform: rotate(360deg) scale(1.02); }
+}
+@keyframes aboutMorph {
+  0%   { border-radius: 50% 50% 48% 52% / 50% 50% 50% 50%; }
+  33%  { border-radius: 42% 58% 50% 50% / 45% 55% 55% 45%; }
+  66%  { border-radius: 58% 42% 48% 52% / 55% 45% 45% 55%; }
+  100% { border-radius: 50% 50% 48% 52% / 50% 50% 50% 50%; }
+}
+@keyframes aboutPath1 {
+  0%   { transform: translate(-6%, -4%) rotate(0deg) scale(1); }
+  50%  { transform: translate(8%, 6%) rotate(12deg) scale(1.03); }
+  100% { transform: translate(0%, 0%) rotate(24deg) scale(1.02); }
+}
+@keyframes aboutPath2 {
+  0%   { transform: translate(6%, 6%) rotate(0deg) scale(1); }
+  50%  { transform: translate(-10%, -8%) rotate(-10deg) scale(1.03); }
+  100% { transform: translate(-2%, 0%) rotate(-22deg) scale(1.02); }
+}
+@keyframes aboutPath3 {
+  0%   { transform: translate(0%, 0%) rotate(0deg) scale(1); }
+  50%  { transform: translate(-6%, 8%) rotate(14deg) scale(1.03); }
+  100% { transform: translate(4%, -6%) rotate(24deg) scale(1.02); }
+}
+
+/* Optional: calm it further on small screens */
+@media (max-width: 600px) {
+  .about-blob { opacity: 0.14; filter: blur(46px); }
+  .about-page.rings::after { opacity: 0.48; }
+}
+
+/* --- About Page --- */
+.about-page {
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-page:before, .about-page:after {
+  content: "";
+  position: absolute;
+  inset: -20% -10% auto auto;
+  width: 480px; height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(0,0,0,0.08), transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.about-page:after { inset: auto auto -20% -10%; }
+
+/* Page Title */
+.page-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+/* --- Hero Section --- */
+.about-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.about-intro.fullwidth {
+  width: 100%;
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  margin-bottom: 28px;
+}
+
+.intro-text {
+  color: #374151;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* --- Skills Section --- */
+.skills-section {
+  margin: 64px 0;
+  padding: 48px 0;
+  border-radius: 24px;
+  margin-top: -4.5%;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 48px rgba(0,0,0,0.12);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.skill-category {
+  background: white;
+  padding: 24px 20px;
+  border-radius: 16px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+
+.skill-category-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.skill-pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill-pill {
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  background: #e5e7eb;
+  border: 1px solid #d1d5db;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  background: #d1d5db;
+}
+
+/* --- Interests / What I Love Doing Section --- */
+.interests-section {
+  margin: 64px 0;
+  padding: 32px 0;
+}
+
+.interests-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.interests-grid {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.interest-card {
+  background: #fff;
+  width: 240px; /* slightly increased */
+  height: 240px; /* slightly increased */
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+}
+
+.interest-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+}
+
+.interest-icon {
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.interest-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.interest-card p {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* --- Goals / My Goals & Aspirations --- */
+.goals-section {
+  margin: 64px 0;
+  padding: 32px 0;
+  background: #f9fafb;
+  border-radius: 24px;
+}
+
+.goals-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.goals-content {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.goal-item {
+  background: #fff;
+  width: 240px; /* slightly increased */
+  height: 240px; /* slightly increased */
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goal-item:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+}
+
+.goal-icon {
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.goal-text h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.goal-text p {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* --- Timeline Section --- */
+.timeline {
+  position: relative;
+  margin-top: 32px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e5e7eb;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 32px;
+  padding-left: 60px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  width: 18px;
+  height: 18px;
+  background: #000;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  position: relative;
+}
+
+.timeline-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.timeline-content p {
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.timeline-year {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: #f3f4f6;
+  color: #111827;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1100px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .interests-grid, .goals-content {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .interests-grid, .goals-content {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .skill-category-title {
+    font-size: 14px;
+  }
+  .interest-card, .goal-item {
+    width: 100%;
+    height: auto;
+  }
+  .goal-text h3, .interest-card h3 {
+    font-size: 16px;
+  }
+}
