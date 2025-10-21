@@ -3,11 +3,11 @@ import profileImg from '../assets/profile.jpg';
 import '../css/home.css';
 
 function Home() {
-  // Lock body scroll while this page is mounted
-  useEffect(() => {
-    document.body.classList.add('lock-scroll');      // disable page scroll only on this route
-    return () => document.body.classList.remove('lock-scroll'); // restore on unmount/route change
-  }, []);
+  // Remove scroll locking for better mobile experience
+  // useEffect(() => {
+  //   document.body.classList.add('lock-scroll');      // disable page scroll only on this route
+  //   return () => document.body.classList.remove('lock-scroll'); // restore on unmount/route change
+  // }, []);
 
   return (
     <div className="page hero">
@@ -95,25 +95,6 @@ function Home() {
         </div>
       </div>
 
-      {/* Bottom Section */}
-      <div className="hero-bottom">
-        <div className="container">
-          <div className="bottom-grid">
-            <div className="bottom-card">
-              <h3>What I Do</h3>
-              <p>Building full-stack applications with modern technologies, focusing on user experience and clean code.</p>
-            </div>
-            <div className="bottom-card">
-              <h3>My Passion</h3>
-              <p>Creating solutions that make a difference, whether it's career guidance or solving complex problems.</p>
-            </div>
-            <div className="bottom-card">
-              <h3>Current Focus</h3>
-              <p>Exploring the latest web technologies.</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

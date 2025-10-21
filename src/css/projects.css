@@ -1,7 +1,18 @@
 
-/* Projects Page styles */
+/* Projects Page styles - Modern and Responsive */
 .projects-page {
   background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+/* Container base styles */
+.projects-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px; /* Default side padding */
+  width: 100%;
+  box-sizing: border-box;
 }
 .projects-hero {
   text-align: center;
@@ -21,9 +32,35 @@
   gap: 24px;
   margin-top: 32px;
 }
+.stat-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
 .stat-icon {
   font-size: 24px;
   margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
 }
 .projects-showcase {
   margin: 48px 0;
@@ -242,18 +279,480 @@
   justify-content: center;
 }
 
-/* Responsive Projects Page */
-@media (max-width: 900px) {
-  .project-stats { grid-template-columns: 1fr; }
-  .project-card { grid-template-columns: 1fr; gap: 24px; }
-  .project-mockup { width: 180px; height: 120px; }
-  .highlights-grid { grid-template-columns: 1fr; }
+/* --- Enhanced Responsive Design --- */
+
+/* Large tablets and small desktops */
+@media (max-width: 1200px) {
+  .projects-page .container {
+    padding: 0 20px;
+  }
+  
+  .project-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .project-card {
+    gap: 32px;
+  }
+  
+  .project-mockup {
+    width: 250px;
+    height: 160px;
+  }
 }
+
+/* Tablets */
+@media (max-width: 900px) {
+  .projects-page .container {
+    padding: 0 18px;
+  }
+  
+  .projects-page {
+    padding: 32px 0;
+  }
+  
+  .project-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .project-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  
+  .project-card.right {
+    direction: ltr; /* Reset direction for mobile */
+  }
+  
+  .project-mockup {
+    width: 200px;
+    height: 140px;
+    margin: 0 auto;
+  }
+  
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .projects-cta {
+    padding: 32px 24px;
+  }
+}
+
+/* Mobile landscape and small tablets */
+@media (max-width: 768px) {
+  .projects-page {
+    padding: 24px 0;
+  }
+  
+  .projects-page .container {
+    padding: 0 20px; /* Increased side padding */
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .projects-hero {
+    margin-bottom: 32px;
+  }
+  
+  .projects-subtitle {
+    font-size: 16px;
+    margin-bottom: 24px;
+    padding: 0 8px; /* Add internal padding */
+  }
+  
+  .project-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+    width: 100%;
+  }
+  
+  .stat-card {
+    padding: 16px 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .stat-icon {
+    font-size: 20px;
+  }
+  
+  .stat-value {
+    font-size: 18px;
+  }
+  
+  .stat-label {
+    font-size: 12px;
+  }
+  
+  .project-card {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  
+  .project-content {
+    padding: 20px 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .project-title {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  
+  .project-description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .project-mockup {
+    width: 180px;
+    height: 120px;
+    margin: 0 auto;
+  }
+  
+  .highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+  
+  .highlight-card {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .projects-cta {
+    padding: 24px 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .cta-content h2 {
+    font-size: 24px;
+  }
+  
+  .cta-actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+}
+
+/* Medium mobile devices */
+@media (max-width: 700px) {
+  .projects-page .container {
+    padding: 0 18px; /* Ensure adequate side padding */
+  }
+  
+  .project-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  
+  .project-mockup {
+    width: 170px;
+    height: 110px;
+  }
+}
+
+/* Mobile portrait */
 @media (max-width: 600px) {
-  .project-content { padding: 12px; }
-  .project-title { font-size: 16px; }
-  .project-description { font-size: 13px; }
-  .mockup-header { padding: 6px; }
-  .mockup-content { padding: 6px; }
-  .mockup-btn { width: 32px; height: 14px; }
+  .projects-page {
+    padding: 20px 0;
+  }
+  
+  .projects-page .container {
+    padding: 0 16px; /* Increased side padding */
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .projects-hero {
+    margin-bottom: 24px;
+  }
+  
+  .projects-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 0 4px; /* Add internal padding */
+  }
+  
+  .project-stats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .stat-card {
+    padding: 12px 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .stat-icon {
+    font-size: 18px;
+  }
+  
+  .stat-value {
+    font-size: 16px;
+  }
+  
+  .stat-label {
+    font-size: 11px;
+  }
+  
+  .project-card {
+    margin-bottom: 32px;
+    width: 100%;
+  }
+  
+  .project-content {
+    padding: 16px 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .project-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  
+  .project-description {
+    font-size: 13px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  
+  .project-features h4,
+  .project-tech h4 {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  
+  .project-features li {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+  
+  .tech-tag {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  
+  .project-actions {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  
+  .project-mockup {
+    width: 160px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  
+  .mockup-header {
+    padding: 8px;
+  }
+  
+  .mockup-content {
+    padding: 12px;
+  }
+  
+  .mockup-line {
+    height: 6px;
+    margin-bottom: 6px;
+  }
+  
+  .mockup-btn {
+    width: 40px;
+    height: 16px;
+  }
+  
+  .highlights-grid {
+    gap: 12px;
+    width: 100%;
+  }
+  
+  .highlight-card {
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .highlight-icon {
+    font-size: 24px;
+  }
+  
+  .highlight-card h3 {
+    font-size: 16px;
+  }
+  
+  .highlight-card p {
+    font-size: 13px;
+  }
+  
+  .projects-cta {
+    padding: 20px 16px;
+    margin: 32px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .cta-content h2 {
+    font-size: 20px;
+  }
+  
+  .cta-content p {
+    font-size: 14px;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 480px) {
+  .projects-page {
+    padding: 16px 0;
+  }
+  
+  .projects-page .container {
+    padding: 0 12px; /* Increased side padding */
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .projects-hero {
+    margin-bottom: 20px;
+  }
+  
+  .projects-subtitle {
+    font-size: 13px;
+    margin-bottom: 16px;
+    padding: 0 2px; /* Add internal padding */
+  }
+  
+  .project-stats {
+    gap: 8px;
+    margin-top: 16px;
+    width: 100%;
+  }
+  
+  .stat-card {
+    padding: 10px 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .stat-icon {
+    font-size: 16px;
+  }
+  
+  .stat-value {
+    font-size: 14px;
+  }
+  
+  .stat-label {
+    font-size: 10px;
+  }
+  
+  .project-card {
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  
+  .project-content {
+    padding: 12px 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .project-title {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  
+  .project-description {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  
+  .project-features h4,
+  .project-tech h4 {
+    font-size: 13px;
+  }
+  
+  .project-features li {
+    font-size: 11px;
+  }
+  
+  .tech-tag {
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+  
+  .project-mockup {
+    width: 140px;
+    height: 90px;
+    margin: 0 auto;
+  }
+  
+  .mockup-header {
+    padding: 6px;
+  }
+  
+  .mockup-content {
+    padding: 8px;
+  }
+  
+  .mockup-line {
+    height: 4px;
+    margin-bottom: 4px;
+  }
+  
+  .mockup-btn {
+    width: 32px;
+    height: 12px;
+  }
+  
+  .highlight-card {
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .highlight-icon {
+    font-size: 20px;
+  }
+  
+  .highlight-card h3 {
+    font-size: 14px;
+  }
+  
+  .highlight-card p {
+    font-size: 12px;
+  }
+  
+  .projects-cta {
+    padding: 16px 12px;
+    margin: 24px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .cta-content h2 {
+    font-size: 18px;
+  }
+  
+  .cta-content p {
+    font-size: 13px;
+  }
 }

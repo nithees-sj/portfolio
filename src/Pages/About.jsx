@@ -136,17 +136,17 @@ function About() {
             <div className="interest-card">
               <div className="interest-icon">💻</div>
               <h3>Coding</h3>
-              <p>Love building applications and solving complex problems through code. Always excited to learn new technologies and frameworks.</p>
+              <p>Building applications and solving problems through code.</p>
             </div>
             <div className="interest-card">
               <div className="interest-icon">🤖</div>
               <h3>AI/ML Research</h3>
-              <p>Fascinated by artificial intelligence and machine learning. Constantly exploring new algorithms and their real-world applications.</p>
+              <p>Exploring artificial intelligence and machine learning algorithms.</p>
             </div>
             <div className="interest-card">
               <div className="interest-icon">📊</div>
               <h3>Data Analysis</h3>
-              <p>Enjoy working with data to extract meaningful insights and patterns that can drive decision-making and innovation.</p>
+              <p>Extracting insights from data to drive innovation.</p>
             </div>
           </div>
         </div>
@@ -161,22 +161,22 @@ function About() {
             <div className="goal-item">
               <div className="goal-icon">🚀</div>
               <div className="goal-text">
-                <h3>Become a Full-Stack Developer</h3>
-                <p>Master both frontend and backend technologies to build complete, scalable applications from scratch.</p>
+                <h3>Full-Stack Developer</h3>
+                <p>Master frontend and backend technologies to build complete applications.</p>
               </div>
             </div>
             <div className="goal-item">
               <div className="goal-icon">🧠</div>
               <div className="goal-text">
                 <h3>AI/ML Specialist</h3>
-                <p>Develop expertise in artificial intelligence and machine learning to create intelligent systems and solutions.</p>
+                <p>Develop expertise in artificial intelligence and machine learning.</p>
               </div>
             </div>
             <div className="goal-item">
               <div className="goal-icon">🌍</div>
               <div className="goal-text">
-                <h3>Make a Global Impact</h3>
-                <p>Use technology to solve real-world problems and contribute to projects that make a positive difference in society.</p>
+                <h3>Global Impact</h3>
+                <p>Use technology to solve real-world problems and make a positive difference.</p>
               </div>
             </div>
           </div>

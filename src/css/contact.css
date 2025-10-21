@@ -1,4 +1,4 @@
-/* Contact Page styles */
+/* Contact Page styles - Modern and Responsive */
 
 /* Gentle moving spotlight on a subtle grid */
 .contact-page {
@@ -6,6 +6,17 @@
   overflow: hidden;
   background:
     linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+/* Container base styles */
+.contact-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Faint grid */
@@ -565,25 +576,373 @@
   line-height: 1.6;
 }
 
-/* Responsive Contact Page */
-@media (max-width: 900px) {
-  .contact-methods-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
-  .about-grid { grid-template-columns: 1fr; }
-  .contact-card, .about-card { padding: 24px 16px; }
-  .cta-buttons { flex-direction: column; align-items: center; }
-  .cta-btn { width: 200px; }
-  .about-contact-section { padding: 32px 16px; }
-  .contact-cta { padding: 32px 16px; }
+/* --- Enhanced Responsive Design --- */
+
+/* Large tablets and small desktops */
+@media (max-width: 1200px) {
+  .contact-page .container {
+    padding: 0 20px;
+  }
+  
+  .contact-methods-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .about-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
 }
 
+/* Tablets */
+@media (max-width: 900px) {
+  .contact-page {
+    padding: 32px 0;
+  }
+  
+  .contact-page .container {
+    padding: 0 18px;
+  }
+  
+  .contact-methods-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .contact-card, .about-card {
+    padding: 24px 16px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .cta-btn {
+    width: 200px;
+  }
+  
+  .about-contact-section {
+    padding: 32px 16px;
+  }
+  
+  .contact-cta {
+    padding: 32px 16px;
+  }
+}
+
+/* Mobile landscape and small tablets */
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 24px 0;
+  }
+  
+  .contact-page .container {
+    padding: 0 16px;
+  }
+  
+  .page-title {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+  
+  .contact-hero-section {
+    margin: 32px 0;
+  }
+  
+  .contact-intro {
+    margin-bottom: 32px;
+  }
+  
+  .contact-methods-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 24px 0;
+  }
+  
+  .contact-card {
+    padding: 20px 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .contact-card .contact-icon {
+    font-size: 36px;
+  }
+  
+  .contact-card h3 {
+    font-size: 18px;
+  }
+  
+  .contact-card p {
+    font-size: 14px;
+  }
+  
+  .about-contact-section {
+    margin: 48px 0;
+    padding: 24px 0;
+  }
+  
+  .about-card {
+    padding: 20px 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .about-icon {
+    font-size: 32px;
+  }
+  
+  .about-card h3 {
+    font-size: 16px;
+  }
+  
+  .about-card p {
+    font-size: 13px;
+  }
+  
+  .interests-section {
+    margin: 48px 0;
+  }
+  
+  .interests-grid {
+    gap: 12px;
+    margin-top: 24px;
+  }
+  
+  .interest-tag {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  
+  .contact-cta {
+    margin: 48px 0;
+    padding: 24px 16px;
+  }
+  
+  .contact-cta h2 {
+    font-size: 24px;
+  }
+  
+  .contact-cta p {
+    font-size: 16px;
+  }
+  
+  .cta-btn {
+    width: 180px;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile portrait */
 @media (max-width: 600px) {
-  .contact-methods-grid { grid-template-columns: 1fr; }
-  .contact-card, .about-card { padding: 20px 12px; }
-  .contact-card .contact-icon { font-size: 36px; }
-  .about-icon { font-size: 32px; }
-  .interests-grid { gap: 12px; }
-  .interest-tag { padding: 10px 16px; font-size: 13px; }
-  .page-title { font-size: 36px; }
-  .contact-cta h2 { font-size: 24px; }
-  .contact-cta p { font-size: 16px; }
+  .contact-page {
+    padding: 20px 0;
+  }
+  
+  .contact-page .container {
+    padding: 0 12px;
+  }
+  
+  .page-title {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+  
+  .contact-hero-section {
+    margin: 24px 0;
+  }
+  
+  .contact-intro {
+    margin-bottom: 24px;
+  }
+  
+  .contact-methods-grid {
+    gap: 12px;
+    margin: 20px 0;
+  }
+  
+  .contact-card {
+    padding: 16px 12px;
+  }
+  
+  .contact-card .contact-icon {
+    font-size: 32px;
+  }
+  
+  .contact-card h3 {
+    font-size: 16px;
+  }
+  
+  .contact-card p {
+    font-size: 13px;
+  }
+  
+  .contact-description {
+    font-size: 12px;
+  }
+  
+  .about-contact-section {
+    margin: 40px 0;
+    padding: 20px 0;
+  }
+  
+  .about-card {
+    padding: 16px 12px;
+  }
+  
+  .about-icon {
+    font-size: 28px;
+  }
+  
+  .about-card h3 {
+    font-size: 15px;
+  }
+  
+  .about-card p {
+    font-size: 12px;
+  }
+  
+  .interests-section {
+    margin: 40px 0;
+  }
+  
+  .interests-grid {
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .interest-tag {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+  
+  .contact-cta {
+    margin: 40px 0;
+    padding: 20px 12px;
+  }
+  
+  .contact-cta h2 {
+    font-size: 22px;
+  }
+  
+  .contact-cta p {
+    font-size: 14px;
+  }
+  
+  .cta-btn {
+    width: 160px;
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 16px 0;
+  }
+  
+  .contact-page .container {
+    padding: 0 8px;
+  }
+  
+  .page-title {
+    font-size: 28px;
+  }
+  
+  .contact-hero-section {
+    margin: 20px 0;
+  }
+  
+  .contact-intro {
+    margin-bottom: 20px;
+  }
+  
+  .contact-methods-grid {
+    gap: 10px;
+    margin: 16px 0;
+  }
+  
+  .contact-card {
+    padding: 14px 10px;
+  }
+  
+  .contact-card .contact-icon {
+    font-size: 28px;
+  }
+  
+  .contact-card h3 {
+    font-size: 15px;
+  }
+  
+  .contact-card p {
+    font-size: 12px;
+  }
+  
+  .contact-description {
+    font-size: 11px;
+  }
+  
+  .about-contact-section {
+    margin: 32px 0;
+    padding: 16px 0;
+  }
+  
+  .about-card {
+    padding: 14px 10px;
+  }
+  
+  .about-icon {
+    font-size: 24px;
+  }
+  
+  .about-card h3 {
+    font-size: 14px;
+  }
+  
+  .about-card p {
+    font-size: 11px;
+  }
+  
+  .interests-section {
+    margin: 32px 0;
+  }
+  
+  .interests-grid {
+    gap: 8px;
+    margin-top: 16px;
+  }
+  
+  .interest-tag {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+  
+  .contact-cta {
+    margin: 32px 0;
+    padding: 16px 10px;
+  }
+  
+  .contact-cta h2 {
+    font-size: 20px;
+  }
+  
+  .contact-cta p {
+    font-size: 13px;
+  }
+  
+  .cta-btn {
+    width: 140px;
+    padding: 8px 16px;
+    font-size: 12px;
+  }
 }

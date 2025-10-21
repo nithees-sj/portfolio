@@ -2,11 +2,7 @@
    🌐 HOME PAGE STYLES - FULL ENHANCED
 ===================================*/
 
-/* Scroll lock: applied only while Home is mounted (class toggled in Home.jsx) */
-.lock-scroll {
-  overflow: hidden;   /* disable body scroll */
-  height: 100%;       /* avoid accidental extra height */
-}
+/* Scroll lock removed for better mobile experience */
 
 /* Hero title and text */
 .hero-title {
@@ -33,44 +29,68 @@
 .roles { color: #374151; margin-bottom: 24px; }
 .muted-small { color: #6b7280; font-size: 16px; }
 
-/* Hero actions buttons */
+/* Hero actions buttons - smaller and simpler */
 .actions {
   display: flex;
-  gap: 16px;
+  gap: 12px; /* Smaller gap */
   justify-content: flex-start;
   margin-left: 0;
   margin-top: 5%;
   flex-wrap: wrap;
+  width: 100%; /* Full width for better alignment */
+  max-width: 100%; /* Ensure buttons don't overflow */
 }
 .btn {
   display: inline-block;
-  padding: 12px 24px;
-  border-radius: 15px;
-  font-size: 14px;
-  font-weight: 600;
+  padding: 8px 16px; /* Smaller padding */
+  border-radius: 8px; /* Smaller border radius */
+  font-size: 12px; /* Smaller font */
+  font-weight: 500; /* Lighter weight */
   text-decoration: none;
-  border-width: 1px;
-  background: #ffffff;
-  color: #000;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: none; /* Remove border */
+  background: #ffffff; /* White background */
+  color: #6b7280; /* Gray text */
+  transition: all 0.2s ease; /* Faster transition */
+  box-shadow: none; /* Remove shadow */
   position: relative;
   overflow: hidden;
 }
 .btn-outline {
-  background: #fff;
-  color: #000;
-  border: 1px solid #000;
+  background: #ffffff; /* White background */
+  color: #6b7280; /* Gray text */
+  border: none; /* Remove border */
 }
 .btn-outline:hover {
-  background: #2a2a2a;
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  background: #f9fafb; /* Very light gray on hover */
+  color: #374151; /* Darker text on hover */
+  transform: translateY(-1px); /* Subtle lift */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow on hover */
 }
 .btn-outline:active {
   transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: none;
+}
+
+/* Focus states for accessibility */
+.btn:focus,
+.btn-outline:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Improved touch targets for mobile */
+@media (max-width: 768px) {
+  .btn, .btn-outline {
+    touch-action: manipulation;
+  }
+  
+  .tech-badge {
+    touch-action: manipulation;
+  }
+  
+  .fact-item {
+    touch-action: manipulation;
+  }
 }
 
 /* ================================
@@ -81,7 +101,7 @@
   position: relative;
   overflow: hidden;
   z-index: 0;
-  min-height: 100vh;
+  height: 100vh; /* Fixed height instead of min-height */
   display: flex;
   flex-direction: column;
   /* very mild base gradient wash */
@@ -158,13 +178,17 @@
 .floating-line { display: none; }
 .floating-shape { display: none; }
 
-/* Hero layout */
+/* Hero layout - stable and non-scrollable */
 .margin-fixer {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 80px 16px 0;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 100px 16px 40px; /* Reduced top padding to prevent overflow */
   animation: fadeInUp 0.8s ease-out;
+  height: 100vh; /* Fixed height instead of min-height */
+  overflow: hidden; /* Prevent scrolling */
 }
 
 @keyframes fadeInUp {
@@ -183,12 +207,30 @@
   grid-template-columns: 1.2fr .8fr;
   gap: 48px;
   align-items: center;
-  flex: 1;
+  justify-items: center; /* Center grid items */
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
-.hero-copy { max-width: 640px; }
+.hero-copy { 
+  max-width: 640px; 
+  text-align: left; /* Keep text left-aligned within its container */
+}
+
+/* Mobile text centering */
+@media (max-width: 900px) {
+  .hero-copy {
+    text-align: center; /* Center text on mobile */
+  }
+  
+  .hero-title {
+    text-align: center; /* Ensure title is centered */
+  }
+  
+  .subtitle {
+    text-align: center; /* Ensure subtitles are centered */
+  }
+}
 
 /* Badges */
 .badge-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 28px; }
@@ -277,10 +319,10 @@
 .tech-badge:hover { background: #f3f4f6; transform: translateY(-1px); }
 .badge-icon { font-size: 14px; }
 
-/* Stats & facts */
+/* Stats & facts - reduced size */
 .quick-facts {
   display: flex;
-  gap: 12px;
+  gap: 8px; /* Reduced gap */
   margin-top: 16px;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -288,13 +330,13 @@
 .fact-item {
   display: flex;
   align-items: center;
-  height: 50px;
-  width: 170px;
-  gap: 6px;
+  height: 40px; /* Reduced from 50px */
+  width: 140px; /* Reduced from 170px */
+  gap: 4px; /* Reduced gap */
   background: #f9fafb;
-  padding: 6px 10px;
-  border-radius: 16px;
-  font-size: 13px;
+  padding: 4px 8px; /* Reduced padding */
+  border-radius: 12px; /* Reduced border radius */
+  font-size: 11px; /* Reduced from 13px */
   font-weight: 600;
   color: #374151;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
@@ -302,41 +344,51 @@
 }
 .fact-item:hover {
   background: #f3f4f6;
-  transform: translateY(-2px);
+  transform: translateY(-1px); /* Reduced hover effect */
 }
-.fact-icon { font-size: 10px; color: #2563eb; }
+.fact-icon { font-size: 8px; color: #2563eb; } /* Reduced icon size */
 
-/* Bottom hero section */
-.hero-bottom {
-  background: #efeff0;
-  padding: 40px 0;
-  width: 100%;
-  margin-top: 0; /* remove top margin */
-}
-.bottom-grid { 
-  display: grid; 
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 24px; 
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-.bottom-card { 
-  text-align: center; 
-  padding: 24px; 
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.bottom-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-}
-.bottom-card h3 { font-size: 18px; font-weight: 700; color: #111827; margin-bottom: 12px; }
-.bottom-card p { color: #6b7280; line-height: 1.6; }
+/* Footer section removed - content now properly centered */
 
 /* 📱 RESPONSIVE STYLES */
+
+/* Extra large screens - optimize for very wide displays */
+@media (min-width: 1400px) {
+  .hero-grid {
+    max-width: 1300px;
+    gap: 60px;
+  }
+  
+  .hero-title {
+    font-size: 52px;
+  }
+  
+  .subtitle {
+    font-size: 22px;
+  }
+  
+  .portrait {
+    width: 360px;
+    height: 450px;
+  }
+  
+  .bottom-grid {
+    max-width: 1200px;
+    gap: 20px;
+  }
+  
+  .bottom-card {
+    padding: 20px;
+  }
+  
+  .bottom-card h3 {
+    font-size: 18px;
+  }
+  
+  .bottom-card p {
+    font-size: 15px;
+  }
+}
 
 /* Large tablets and small desktops */
 @media (max-width: 1200px) {
@@ -345,12 +397,17 @@
     gap: 40px;
   }
   .portrait { width: 280px; height: 350px; }
+  
+  /* Footer removed - content properly centered */
 }
 
 /* Tablets */
 @media (max-width: 900px) {
   .margin-fixer {
-    padding: 60px 16px 0;
+    padding: 80px 16px 30px; /* Reduced padding to fit content */
+    justify-content: center; /* Center content */
+    height: 100vh; /* Fixed height */
+    overflow: hidden; /* Prevent scrolling */
   }
   
   .hero-title { 
@@ -366,6 +423,7 @@
     grid-template-columns: 1fr; 
     gap: 32px; 
     text-align: center;
+    width: 100%;
   }
   .hero-visual { 
     order: -1; 
@@ -373,14 +431,16 @@
     justify-self: center;
   }
   .portrait { 
-    width: 240px; 
-    height: 300px; 
+    width: 280px; /* Increased from 240px */
+    height: 350px; /* Increased from 300px */
   }
   
   .actions { 
     justify-content: center;
-    gap: 12px; 
+    gap: 10px; /* Smaller gap for mobile */
     margin-top: 32px;
+    flex-wrap: wrap; /* Allow wrapping */
+    width: 100%;
   }
   
   .badge-row {
@@ -392,59 +452,102 @@
     justify-content: center;
   }
   
-  .bottom-grid { 
-    grid-template-columns: 1fr; 
-    gap: 20px;
-  }
-  
-  .hero-bottom {
-    padding: 32px 0;
-  }
+  /* Footer removed - content properly centered */
 }
 
 /* Mobile landscape and small tablets */
 @media (max-width: 768px) {
   .margin-fixer {
-    padding: 50px 12px 0;
+    padding: 60px 12px 20px; /* Reduced padding to fit content */
+    justify-content: center; /* Center content */
+    height: 100vh; /* Fixed height */
+    overflow: hidden; /* Prevent scrolling */
   }
   
   .hero-title { 
     font-size: 28px; 
+    line-height: 1.2;
   }
   .subtitle { 
     font-size: 16px; 
+    margin-bottom: 6px;
   }
   
   .portrait { 
-    width: 200px; 
-    height: 250px; 
+    width: 240px; /* Increased from 200px */
+    height: 300px; /* Increased from 250px */
   }
   
   .actions { 
     flex-wrap: wrap;
-    gap: 10px; 
+    gap: 8px; /* Smaller gap for mobile */
+    margin-top: 24px; /* Reduced from default */
+    justify-content: center; /* Center buttons */
+    width: 100%;
   }
   
   .btn, .btn-outline { 
-    padding: 8px 16px; 
-    font-size: 14px; 
+    padding: 6px 12px; /* Smaller padding for mobile */
+    font-size: 11px; /* Smaller font for mobile */
+    min-height: 36px; /* Smaller touch target */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto; /* Don't grow or shrink */
   }
   
   .tech-badge {
     font-size: 11px;
-    padding: 6px 10px;
+    padding: 8px 12px; /* Increased padding for better touch */
+    min-height: 36px;
+    display: flex;
+    align-items: center;
   }
   
   .fact-item {
-    width: 150px;
-    font-size: 12px;
+    width: 120px; /* Reduced from 150px */
+    font-size: 10px; /* Reduced from 12px */
+    min-height: 36px; /* Reduced height */
+    padding: 3px 6px; /* Reduced padding */
   }
+  
+  /* Improve floating cards positioning on mobile */
+  .float-card {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  
+  .fc-top { top: -10px; right: -10px; }
+  .fc-bottom { bottom: -10px; left: -10px; }
+}
+
+/* Medium mobile devices */
+@media (max-width: 700px) {
+  .hero-grid {
+    gap: 24px;
+  }
+  
+  .portrait {
+    width: 220px; /* Increased from 180px */
+    height: 275px; /* Increased from 225px */
+  }
+  
+  .float-card {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+  
+  .fc-top { top: -8px; right: -8px; }
+  .fc-bottom { bottom: -8px; left: -8px; }
 }
 
 /* Mobile portrait */
 @media (max-width: 600px) {
   .margin-fixer {
-    padding: 40px 12px 0;
+    padding: 50px 12px 15px; /* Reduced padding to fit content */
+    justify-content: center; /* Center content */
+    height: 100vh; /* Fixed height */
+    overflow: hidden; /* Prevent scrolling */
   }
   
   .hero-title { 
@@ -456,21 +559,31 @@
   }
   
   .portrait { 
-    width: 160px; 
-    height: 200px; 
+    width: 200px; /* Increased from 160px */
+    height: 250px; /* Increased from 200px */
   }
   
   .actions { 
-    flex-direction: column;
+    flex-direction: row; /* Keep horizontal layout */
+    flex-wrap: wrap; /* Allow wrapping */
     align-items: center;
-    gap: 8px; 
+    justify-content: center; /* Center buttons */
+    gap: 6px; /* Smaller gap for mobile */
+    margin-top: 20px;
+    width: 100%;
   }
   
   .btn, .btn-outline { 
-    padding: 10px 20px; 
-    font-size: 14px; 
-    width: 200px;
+    padding: 6px 10px; /* Smaller padding */
+    font-size: 10px; /* Smaller font */
+    width: auto; /* Auto width */
+    min-width: 70px; /* Minimum width */
     text-align: center;
+    min-height: 32px; /* Smaller touch target */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto; /* Don't grow or shrink */
   }
   
   .badge-row {
@@ -483,37 +596,70 @@
   }
   
   .fact-item {
-    width: 140px;
-    height: 45px;
-    font-size: 11px;
-    padding: 5px 8px;
+    width: 110px; /* Reduced from 140px */
+    height: 36px; /* Reduced from 45px */
+    font-size: 9px; /* Reduced from 11px */
+    padding: 3px 6px; /* Reduced padding */
   }
   
   .quick-facts {
     gap: 8px;
   }
   
-  .bottom-card {
-    padding: 20px 16px;
+  /* Footer removed - content properly centered */
+}
+
+/* Small mobile devices */
+@media (max-width: 520px) {
+  .margin-fixer {
+    padding: 15px 8px;
+    justify-content: center;
   }
   
-  .bottom-card h3 {
-    font-size: 16px;
+  .hero-title {
+    font-size: 22px;
+    line-height: 1.3;
   }
   
-  .bottom-card p {
-    font-size: 14px;
+  .subtitle {
+    font-size: 15px;
   }
   
-  .hero-bottom {
-    padding: 24px 0;
+  .portrait {
+    width: 150px;
+    height: 190px;
+  }
+  
+  .actions {
+    margin-top: 16px;
+  }
+  
+  .btn, .btn-outline {
+    width: 190px;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  
+  .tech-badge {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+  
+  .fact-item {
+    width: 100px; /* Reduced from 130px */
+    height: 32px; /* Reduced from 42px */
+    font-size: 9px; /* Reduced from 11px */
+    padding: 2px 5px; /* Reduced padding */
   }
 }
 
 /* Very small mobile devices */
 @media (max-width: 480px) {
   .margin-fixer {
-    padding: 30px 8px 0;
+    padding: 40px 8px 10px; /* Reduced padding to fit content */
+    justify-content: center; /* Center content */
+    height: 100vh; /* Fixed height */
+    overflow: hidden; /* Prevent scrolling */
   }
   
   .hero-title { 
@@ -524,14 +670,23 @@
   }
   
   .portrait { 
-    width: 140px; 
-    height: 175px; 
+    width: 180px; /* Increased from 140px */
+    height: 225px; /* Increased from 175px */
   }
   
-  .btn, .btn-outline { 
-    width: 180px;
-    padding: 8px 16px; 
-    font-size: 13px; 
+  .actions {
+    gap: 4px; /* Very small gap */
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .btn, .btn-outline {
+    width: auto; /* Auto width */
+    min-width: 60px; /* Minimum width */
+    padding: 5px 8px; /* Smaller padding */
+    font-size: 10px; /* Smaller font */
+    min-height: 30px; /* Smaller touch target */
+    flex: 0 0 auto; /* Don't grow or shrink */
   }
   
   .tech-badge {
@@ -540,22 +695,13 @@
   }
   
   .fact-item {
-    width: 120px;
-    height: 40px;
-    font-size: 10px;
+    width: 90px; /* Reduced from 120px */
+    height: 30px; /* Reduced from 40px */
+    font-size: 8px; /* Reduced from 10px */
+    padding: 2px 4px; /* Reduced padding */
   }
   
-  .bottom-card {
-    padding: 16px 12px;
-  }
-  
-  .bottom-card h3 {
-    font-size: 15px;
-  }
-  
-  .bottom-card p {
-    font-size: 13px;
-  }
+  /* Footer removed - content properly centered */
 }
 
 /* Keyframes for background animation */

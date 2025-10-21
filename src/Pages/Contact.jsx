@@ -112,11 +112,8 @@ function Contact() {
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
           <div className="cta-buttons">
-            <a href="https://www.linkedin.com/in/nithees-s-j-524262366/" target="_blank" rel="noopener noreferrer" className="cta-btn">
-              Connect on LinkedIn
-            </a>
-            <a href="https://github.com/nithees-sj" target="_blank" rel="noopener noreferrer" className="cta-btn">
-              View My GitHub
+            <a href="mailto:nitheessj@gmail.com?subject=Connect with Nithees S J" className="cta-btn">
+              Get In Touch
             </a>
           </div>
         </div>
