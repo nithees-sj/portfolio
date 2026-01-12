@@ -37,17 +37,14 @@ function About() {
         {/* Intro */}
         <div data-observe id="intro" className={`mb-8 rounded-2xl bg-white p-10 shadow-xl transition-all duration-700 ${visibleSections.intro ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="mb-3 leading-relaxed text-gray-700">
-            I'm a passionate student pursuing Artificial Intelligence and Machine
-            Learning at Kongu Engineering College, Perundurai. I love building
-            full-stack applications and solving complex problems through
-            technology.
+            I’m an AIML student at Kongu Engineering College, Perundurai, focused on
+            building full-stack applications and solving real-world problems.
           </p>
-          <p className="leading-relaxed text-gray-700">
-            My journey in technology started with web development, and I've since
-            expanded into machine learning, data analysis, and software
-            engineering. I believe in continuous learning and staying updated
-            with the latest technologies.
-          </p>
+
+            <p className="leading-relaxed text-gray-700">
+             I started with web development and grew into machine learning, data
+              analysis, and software engineering through continuous learning.
+            </p>
         </div>
 
         {/* Skills */}
