@@ -1,55 +1,61 @@
-import React from 'react';
-import '../css/projects.css';
+import React, { useState, useEffect } from "react";
 
 function Projects() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   const projects = [
     {
       id: 1,
-      title: "Career Development Chatbot",
-      description: "A platform for users of all ages to ask career-related questions and receive instant guidance.",
-      features: [
-        "AI-powered career guidance",
-        "Multi-age group support", 
-        "Instant question answering",
-        "Personalized recommendations"
-      ],
-      tech: ["React", "Node.js", "MongoDB", "AI/ML"],
-      status: "Completed",
-      category: "AI/Career Guidance",
-      codeUrl: "https://github.com/nithees-sj/attendance-management"
-    },
-    {
-      id: 2,
-      title: "Personalized Career Developer and Doubt Solver",
-      description: "Allows users to personalize an AI chatbot for precise answers and post doubts to be clarified by AI.",
-      features: [
-        "Personalized AI chatbot",
-        "Doubt posting system",
-        "AI-powered clarifications",
-        "User customization"
-      ],
-      tech: ["React", "Node.js", "MongoDB", "OpenAI API"],
-      status: "Completed", 
-      category: "AI/Personalization",
-      codeUrl: "https://github.com/nithees-sj/career-bot"
-    },
-    {
-      id: 3,
       title: "Career Developer + Doubt Solver Pro",
-      description: "Combines both career and learning features with comprehensive tools for students and professionals.",
+      description:
+        "Combines both career and learning features with comprehensive tools for students and professionals.",
       features: [
         "Resume builder",
-        "Roadmap designer", 
+        "Roadmap designer",
         "Project ideas generator",
         "Skill guidance for specific roles",
         "Doubt solver with multi-format support",
         "Summarizer and quiz generator",
-        "Video upload and quiz generation for teachers"
+        "Video upload and quiz generation for teachers",
       ],
-      tech: ["React", "Node.js", "MongoDB", "AI/ML", "PDF Processing", "Video Processing"],
+      tech: [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "AI/ML",
+        "PDF Processing",
+        "Video Processing",
+      ],
       status: "Completed",
-      category: "Full-Stack Platform",
-      codeUrl: "https://github.com/nithees-sj/novard-ai/"
+      codeUrl: "https://github.com/nithees-sj/novard-ai/",
+    },
+    {
+      id: 2,
+      title: "Spell Checker & Sentence Corrector using TRIE",
+      description:
+        "A console-based application that uses the TRIE data structure to detect and correct spelling mistakes in words and sentences, with secure user login authentication.",
+      features: [
+        "TRIE-based dictionary for fast word lookup",
+        "User login and authentication system",
+        "Detection of incorrect spellings",
+        "Word-level spelling correction suggestions",
+        "Sentence-level spelling correction",
+        "Efficient prefix-based search using TRIE",
+        "Console-based interactive interface"
+      ],
+      tech: [
+        "Data Structures",
+        "TRIE",
+        "Console Application",
+        "Authentication",
+        "Algorithms"
+      ],
+      status: "Completed",
+      codeUrl: "https://github.com/nithees-sj/spell-checker-trie"
     }
   ];
 
@@ -57,134 +63,222 @@ function Projects() {
     { label: "Projects Completed", value: "3", icon: "✅" },
     { label: "Technologies Used", value: "10+", icon: "⚡" },
     { label: "AI Integration", value: "100%", icon: "🤖" },
-    { label: "User Focused", value: "100%", icon: "👥" }
+    { label: "User Focused", value: "100%", icon: "👥" },
   ];
 
   return (
-    <div className="page projects-page">
-      <div className="container">
-        {/* Hero section */}
-        <div className="projects-hero">
-          <h1 className="section-title">My Projects</h1>
-          <p className="projects-subtitle">
-            Building innovative solutions that bridge the gap between technology and career development
+    <div className={`min-h-screen bg-gradient-to-br from-white to-gray-50 py-10 pt-24 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+      <div className="mx-auto w-full max-w-6xl px-6">
+        {/* HERO */}
+        <section className="mb-16 text-center">
+          <h1 className="mb-4 text-5xl font-extrabold text-gray-900 animate-fade-in">
+            My Projects
+          </h1>
+          <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-500 animate-fade-in-delay-1">
+            Building innovative solutions that bridge the gap between technology
+            and career development
           </p>
-          
-          <div className="project-stats">
-            {projectStats.map((stat, index) => (
-              <div key={index} className="stat-card">
-                <div className="stat-icon">{stat.icon}</div>
-                <div className="stat-value">{stat.value}</div>
-                <div className="stat-label">{stat.label}</div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {projectStats.map((stat, idx) => (
+              <div
+                key={stat.label}
+                style={{ transitionDelay: `${idx * 0.1}s` }}
+                className="rounded-xl bg-white p-5 text-center shadow-md transition hover:-translate-y-1 hover:shadow-lg animate-slide-up"
+              >
+                <div className="mb-2 text-2xl">{stat.icon}</div>
+                <div className="text-xl font-bold text-gray-900">
+                  {stat.value}
+                </div>
+                <div className="text-sm font-medium text-gray-500">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
-        {/* Projects showcase */}
-        <div className="projects-showcase">
+        {/* PROJECTS */}
+        <section className="space-y-16">
           {projects.map((project, index) => (
-            <div key={project.id} className={`project-card ${index % 2 === 0 ? 'left' : 'right'}`}>
-              <div className="project-content">
-                <div className="project-header">
-                  <div className="project-category">{project.category}</div>
-                  <div className={`project-status status-${project.status.toLowerCase().replace(' ', '-')}`}>
+            <div
+              key={project.id}
+              className={`grid items-center gap-12 lg:grid-cols-2 transition-all duration-700 ${
+                index % 2 !== 0 ? "lg:[direction:rtl]" : ""
+              } ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+              style={{ transitionDelay: `${index * 0.2}s` }}
+            >
+              {/* CONTENT */}
+              <div className="rounded-2xl bg-white p-8 shadow-xl lg:[direction:ltr] transition hover:-translate-y-1 hover:shadow-2xl">
+                <div className="mb-4 flex items-center justify-end">
+                  <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">
                     {project.status}
-                  </div>
+                  </span>
                 </div>
-                
-                <h2 className="project-title">{project.title}</h2>
-                <p className="project-description">{project.description}</p>
-                
-                <div className="project-features">
-                  <h4>Key Features:</h4>
-                  <ul>
-                    {project.features.map((feature, idx) => (
-                      <li key={idx}>{feature}</li>
+
+                <h2 className="mb-3 text-2xl font-extrabold text-gray-900">
+                  {project.title}
+                </h2>
+                <p className="mb-6 text-gray-600">
+                  {project.description}
+                </p>
+
+                <div className="mb-6">
+                  <h4 className="mb-2 font-bold text-gray-900">
+                    Key Features:
+                  </h4>
+                  <ul className="space-y-1">
+                    {project.features.map((f) => (
+                      <li
+                        key={f}
+                        className="relative pl-5 text-sm text-gray-700 before:absolute before:left-0 before:content-['✓'] before:text-emerald-500"
+                      >
+                        {f}
+                      </li>
                     ))}
                   </ul>
                 </div>
-                
-                <div className="project-tech">
-                  <h4>Technologies:</h4>
-                  <div className="tech-tags">
-                    {project.tech.map((tech, idx) => (
-                      <span key={idx} className="tech-tag">{tech}</span>
+
+                <div className="mb-6">
+                  <h4 className="mb-2 font-bold text-gray-900">
+                    Technologies:
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((t) => (
+                      <span
+                        key={t}
+                        className="rounded-full bg-gradient-to-r from-gray-50 to-gray-100 px-3 py-1 text-xs font-semibold text-gray-900 border border-gray-200 transition hover:border-gray-400 hover:bg-gray-100"
+                      >
+                        {t}
+                      </span>
                     ))}
                   </div>
                 </div>
-                
-                <div className="project-actions">
-                  <button className="btn btn-primary">View Details</button>
-                  <a href={project.codeUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+
+                <div className="flex gap-3">
+                  <a
+                    href={project.codeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-lg border border-gray-900 px-5 py-2 text-sm font-semibold text-gray-900 transition hover:-translate-y-0.5 hover:bg-gray-900 hover:text-white hover:shadow-lg"
+                  >
                     View Code
                   </a>
                 </div>
               </div>
-              
-              <div className="project-visual">
-                <div className="project-mockup">
-                  <div className="mockup-header">
-                    <div className="mockup-dots">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
+
+              {/* MOCKUP */}
+              <div className="flex justify-center">
+                <div className="h-[200px] w-[300px] overflow-hidden rounded-xl border border-gray-200 bg-gradient-to-br from-gray-50 to-gray-100 shadow-lg transition hover:shadow-xl">
+                  <div className="flex items-center gap-2 bg-gray-300 px-4 py-2">
+                    <span className="h-2 w-2 rounded-full bg-red-400"></span>
+                    <span className="h-2 w-2 rounded-full bg-yellow-400"></span>
+                    <span className="h-2 w-2 rounded-full bg-green-400"></span>
                   </div>
-                  <div className="mockup-content">
-                    <div className="mockup-line"></div>
-                    <div className="mockup-line short"></div>
-                    <div className="mockup-line medium"></div>
-                    <div className="mockup-buttons">
-                      <div className="mockup-btn"></div>
-                      <div className="mockup-btn"></div>
+                  <div className="space-y-3 p-4 animate-pulse">
+                    <div className="h-2 rounded bg-gray-300"></div>
+                    <div className="h-2 w-3/5 rounded bg-gray-300"></div>
+                    <div className="h-2 w-4/5 rounded bg-gray-300"></div>
+                    <div className="mt-4 flex gap-2">
+                      <div className="h-6 w-14 rounded bg-gray-600"></div>
+                      <div className="h-6 w-14 rounded bg-gray-600"></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           ))}
-        </div>
+        </section>
 
-        {/* Project highlights */}
-        <div className="project-highlights">
-          <h2 className="section-subtitle">Project Highlights</h2>
-          <div className="highlights-grid">
-            <div className="highlight-card">
-              <div className="highlight-icon">🎯</div>
-              <h3>Problem Solving</h3>
-              <p>Each project addresses real-world challenges in career development and education</p>
-            </div>
-            <div className="highlight-card">
-              <div className="highlight-icon">🤖</div>
-              <h3>AI Integration</h3>
-              <p>Leveraging AI and machine learning to provide intelligent solutions</p>
-            </div>
-            <div className="highlight-card">
-              <div className="highlight-icon">👥</div>
-              <h3>User-Centric</h3>
-              <p>Designed with user experience and accessibility in mind</p>
-            </div>
-            <div className="highlight-card">
-              <div className="highlight-icon">📈</div>
-              <h3>Scalable Solutions</h3>
-              <p>Built with modern technologies for performance and scalability</p>
-            </div>
-          </div>
-        </div>
+        {/* HIGHLIGHTS */}
+        <section className="my-20">
+          <h2 className="mb-8 text-center text-3xl font-extrabold text-gray-900 animate-fade-in">
+            Project Highlights
+          </h2>
 
-        {/* Call to action */}
-        <div className="projects-cta">
-          <div className="cta-content">
-            <h2>Interested in Collaborating?</h2>
-            <p>Let's work together to build something amazing!</p>
-            <div className="cta-actions">
-              <a href="/contact" className="btn btn-primary">Get In Touch</a>
-              <a href="https://github.com/nithees-sj" target="_blank" rel="noopener noreferrer" className="btn btn-outline">View GitHub</a>
-            </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              ["🎯", "Problem Solving", "Real-world career challenges"],
+              ["🤖", "AI Integration", "Smart & intelligent solutions"],
+              ["👥", "User-Centric", "Focused on usability"],
+              ["📈", "Scalable", "Built for growth"],
+            ].map(([icon, title, desc], idx) => (
+              <div
+                key={title}
+                className="rounded-xl bg-white p-6 text-center shadow-md transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div className="mb-3 text-3xl transition-transform duration-300 hover:scale-125">{icon}</div>
+                <h3 className="mb-2 font-bold text-gray-900">{title}</h3>
+                <p className="text-sm text-gray-600">{desc}</p>
+              </div>
+            ))}
           </div>
-        </div>
+        </section>
+
+        {/* CTA */}
+        <section className="my-16 rounded-2xl bg-gray-900 p-12 text-center text-white transition hover:shadow-2xl">
+          <h2 className="mb-3 text-3xl font-extrabold">
+            Interested in Collaborating?
+          </h2>
+          <p className="mb-6 text-gray-300">
+            Let's work together to build something amazing!
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="mailto:nitheessj@gmail.com?subject=Connect with Nithees S J"
+              className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition hover:-translate-y-0.5 hover:shadow-lg hover:bg-gray-50"
+            >
+              Get In Touch
+            </a>
+            <a
+              href="https://github.com/nithees-sj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border border-white px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white hover:text-gray-900"
+            >
+              View GitHub
+            </a>
+          </div>
+        </section>
       </div>
+
+      <style jsx>{`
+        @keyframes fade-in {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+
+        @keyframes slide-up {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in {
+          animation: fade-in 0.8s ease-out forwards;
+        }
+
+        .animate-fade-in-delay-1 {
+          animation: fade-in 0.8s ease-out 0.2s forwards;
+          opacity: 0;
+        }
+
+        .animate-fade-in-delay-2 {
+          animation: fade-in 0.8s ease-out 0.4s forwards;
+          opacity: 0;
+        }
+
+        .animate-slide-up {
+          animation: slide-up 0.6s ease-out forwards;
+          opacity: 0;
+        }
+      `}</style>
     </div>
   );
 }
