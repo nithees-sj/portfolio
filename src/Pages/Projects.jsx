@@ -85,12 +85,7 @@ function Projects() {
 }
 ];
 
-  const projectStats = [
-    { label: "Projects Completed", value: "3", icon: "✅" },
-    { label: "Technologies Used", value: "10+", icon: "⚡" },
-    { label: "AI Integration", value: "100%", icon: "🤖" },
-    { label: "User Focused", value: "100%", icon: "👥" },
-  ];
+
 
   return (
     <div className={`min-h-screen bg-gradient-to-br from-white to-gray-50 py-10 pt-24 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
@@ -100,27 +95,12 @@ function Projects() {
           <h1 className="mb-4 text-5xl font-extrabold text-gray-900 animate-fade-in">
             My Projects
           </h1>
-          <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-500 animate-fade-in-delay-1">
+          <p className="mx-auto mb-6 max-w-2xl text-lg text-gray-500 animate-fade-in-delay-1">
             Building innovative solutions that bridge the gap between technology
             and career development
           </p>
-
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {projectStats.map((stat, idx) => (
-              <div
-                key={stat.label}
-                style={{ transitionDelay: `${idx * 0.1}s` }}
-                className="rounded-xl bg-white p-5 text-center shadow-md transition hover:-translate-y-1 hover:shadow-lg animate-slide-up"
-              >
-                <div className="mb-2 text-2xl">{stat.icon}</div>
-                <div className="text-xl font-bold text-gray-900">
-                  {stat.value}
-                </div>
-                <div className="text-sm font-medium text-gray-500">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
+          <div className="mx-auto mb-10 max-w-2xl">
+            <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
           </div>
         </section>
 
@@ -252,7 +232,9 @@ function Projects() {
 
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="mailto:nitheessj@gmail.com?subject=Connect with Nithees S J"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=nitheessj@gmail.com&su=Connect%20with%20Nithees%20S%20J"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition hover:-translate-y-0.5 hover:shadow-lg hover:bg-gray-50"
             >
               Get In Touch

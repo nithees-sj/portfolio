@@ -4,7 +4,7 @@ import profileImg from "../assets/Formal.png";
 function Home() {
   return (
     <div className="hero relative z-0 flex min-h-screen w-full items-center justify-center overflow-hidden bg-gradient-to-b from-white to-gray-50">
-      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden px-4 pt-28 pb-10 sm:pt-32 sm:pb-12">
+      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden px-4 pt-16 pb-10 sm:pt-32 sm:pb-12">
         {/* Animated background */}
         <div className="pointer-events-none absolute inset-0 z-0">
           <div className="blob blue-1 b1"></div>
@@ -13,21 +13,68 @@ function Home() {
         </div>
 
         {/* Main Grid */}
-        <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center justify-items-center gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
+        <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center justify-items-center gap-4 sm:grid-cols-2 sm:gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
+          {/* Mobile: Image and Name Side by Side */}
+          <div className="w-full sm:hidden flex items-center justify-center gap-4 mb-6">
+            {/* IMAGE */}
+            <div className="relative flex-shrink-0">
+              <div className="relative h-32 w-32 overflow-hidden rounded-full border-2 border-gray-200 bg-gradient-to-br from-gray-100 to-white shadow-xl transition hover:-translate-y-1">
+                <img
+                  src={profileImg}
+                  alt="Nithees SJ"
+                  className="h-full w-full object-cover object-[center_28%] transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+            </div>
+            {/* NAME AND ROLE */}
+            <div className="flex-1 text-left">
+              <h1 className="mb-1 text-2xl font-extrabold leading-tight tracking-tight text-gray-900">
+                Hi, I&apos;m{" "}
+                <span className="bg-gradient-to-br from-blue-600 to-blue-700 bg-clip-text text-transparent">
+                  Nithees SJ
+                </span>
+              </h1>
+              <p className="text-sm font-medium text-gray-600">
+                AIML Engineer
+              </p>
+            </div>
+          </div>
+
+          {/* RIGHT CONTENT – IMAGE (Desktop) */}
+          <div className="relative hidden sm:flex sm:order-2 items-center justify-center">
+            <div className="relative h-[260px] w-[210px] lg:h-[420px] lg:w-[320px] overflow-hidden rounded-2xl border-2 border-gray-200 bg-gradient-to-br from-gray-100 to-white shadow-2xl transition hover:-translate-y-1">
+              <img
+                src={profileImg}
+                alt="Nithees SJ"
+                className="h-full w-full object-cover object-[center_28%] transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+
+            {/* Floating Cards */}
+            <div className="float-card fc-top hidden sm:flex">✨ Data Analyst</div>
+            <div className="float-card fc-bottom hidden sm:flex">🔧 Problem Solver</div>
+          </div>
+
           {/* LEFT CONTENT */}
-          <div className="max-w-xl text-center lg:text-left">
-            <h1 className="mb-3 text-3xl sm:mb-4 sm:text-4xl lg:text-6xl font-extrabold leading-tight tracking-tight text-gray-900">
+          <div className="max-w-xl text-center lg:text-left sm:order-1">
+            {/* Desktop Name and Role */}
+            <h1 className="hidden sm:block mb-3 text-3xl sm:mb-4 sm:text-4xl lg:text-6xl font-extrabold leading-tight tracking-tight text-gray-900">
               Hi, I&apos;m{" "}
               <span className="bg-gradient-to-br from-blue-600 to-blue-700 bg-clip-text text-transparent">
                 Nithees SJ
               </span>
             </h1>
 
-            <p className="mb-1 text-base sm:text-lg lg:text-2xl font-medium text-gray-600">
+            <p className="hidden sm:block mb-1 text-base sm:text-lg lg:text-2xl font-medium text-gray-600">
               Student at Kongu Engineering College, Perundurai
             </p>
-            <p className="mb-4 sm:mb-6 text-base sm:text-lg lg:text-2xl font-medium text-gray-600">
+            <p className="hidden sm:block mb-4 sm:mb-6 text-base sm:text-lg lg:text-2xl font-medium text-gray-600">
               AIML – UG
+            </p>
+
+            {/* Mobile: College info (shown below image/name section) */}
+            <p className="sm:hidden mb-1 text-sm font-medium text-gray-600 text-center">
+              Student at Kongu Engineering College, Perundurai
             </p>
 
             {/* Short intro for mobile */}
@@ -94,21 +141,6 @@ function Home() {
                 )
               )}
             </div>
-          </div>
-
-          {/* RIGHT CONTENT – IMAGE */}
-          <div className="relative mt-6 sm:mt-0 flex items-center justify-center">
-            <div className="relative h-[220px] w-[170px] sm:h-[260px] sm:w-[210px] lg:h-[420px] lg:w-[320px] overflow-hidden rounded-2xl border-2 border-gray-200 bg-gradient-to-br from-gray-100 to-white shadow-2xl transition hover:-translate-y-1">
-              <img
-                src={profileImg}
-                alt="Nithees SJ"
-                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-
-            {/* Floating Cards */}
-            <div className="float-card fc-top hidden xs:flex sm:flex">✨ Data Analyst</div>
-            <div className="float-card fc-bottom hidden xs:flex sm:flex">🔧 Problem Solver</div>
           </div>
         </div>
       </div>

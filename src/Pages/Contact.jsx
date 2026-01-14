@@ -40,7 +40,7 @@ function Contact() {
               title: "Email",
               value: "nitheessj@gmail.com",
               desc: "Best for detailed discussions and project inquiries",
-              link: "mailto:nitheessj@gmail.com",
+              link: "https://mail.google.com/mail/?view=cm&fs=1&to=nitheessj@gmail.com",
             },
             {
               icon: "💼",
@@ -60,7 +60,8 @@ function Contact() {
             <a
               key={c.title}
               href={c.link}
-              {...(c.title !== "Email" && { target: "_blank", rel: "noopener noreferrer" })}
+              target="_blank"
+              rel="noopener noreferrer"
               onMouseEnter={() => setHoveredCard(c.title)}
               onMouseLeave={() => setHoveredCard(null)}
               style={{ transitionDelay: `${idx * 0.1}s` }}
@@ -158,7 +159,9 @@ function Contact() {
           </p>
 
           <a
-            href="mailto:nitheessj@gmail.com?subject=Connect with Nithees S J"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=nitheessj@gmail.com&su=Connect%20with%20Nithees%20S%20J"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block rounded-lg border border-white bg-white px-8 py-3 text-base font-semibold text-gray-900 transition hover:-translate-y-1 hover:bg-transparent hover:text-white hover:shadow-xl"
           >
             Get In Touch
