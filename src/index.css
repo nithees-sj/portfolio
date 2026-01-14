@@ -1,1 +1,142 @@
 @import "tailwindcss";
+/* ===== Hero Background & Motion (Home) ===== */
+.hero {
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: -20%;
+    background: conic-gradient(from 0deg,
+            rgba(37, 99, 235, 0.06),
+            rgba(99, 102, 241, 0.04),
+            rgba(2, 132, 199, 0.04),
+            rgba(17, 24, 39, 0.05),
+            rgba(37, 99, 235, 0.06));
+    filter: blur(30px);
+    animation: rotate-wash 60s linear infinite;
+    z-index: -1;
+}
+
+.blob {
+    position: absolute;
+    width: 38vmax;
+    height: 38vmax;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.18;
+}
+
+.blue-1 {
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.12), transparent);
+}
+
+.blue-2 {
+    background: radial-gradient(circle, rgba(2, 132, 199, 0.12), transparent);
+}
+
+.gray {
+    background: radial-gradient(circle, rgba(17, 24, 39, 0.1), transparent);
+}
+
+.b1 {
+    top: -10%;
+    left: -10%;
+    animation: blob1 50s infinite alternate;
+}
+
+.b2 {
+    bottom: -15%;
+    right: -15%;
+    animation: blob2 55s infinite alternate;
+}
+
+.b3 {
+    top: 30%;
+    left: 55%;
+    animation: blob3 60s infinite alternate;
+}
+
+.float-card {
+    position: absolute;
+    background: white;
+    border: 2px solid #e5e7eb;
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-weight: 700;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    animation: float 6s ease-in-out infinite;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.fc-top {
+    top: -14px;
+    right: -14px;
+}
+
+.fc-bottom {
+    bottom: -14px;
+    left: -14px;
+    animation-delay: 1.5s;
+}
+
+@keyframes rotate-wash {
+    to {
+        transform: rotate(360deg) scale(1.05);
+    }
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes blob1 {
+    to {
+        transform: translate(10%, 6%) rotate(20deg);
+    }
+}
+
+@keyframes blob2 {
+    to {
+        transform: translate(-8%, -10%) rotate(-20deg);
+    }
+}
+
+@keyframes blob3 {
+    to {
+        transform: translate(4%, -6%) rotate(24deg);
+    }
+}
+
+/* ===== Mobile-first tweaks for hero ===== */
+@media (max-width: 640px) {
+    .hero {
+        padding-top: 0.25rem;
+    }
+
+    .hero::before {
+        inset: -30%;
+        filter: blur(26px);
+    }
+
+    .blob {
+        width: 60vmax;
+        height: 60vmax;
+        filter: blur(32px);
+        opacity: 0.16;
+    }
+
+    .fc-top {
+        top: -6px;
+        right: 0;
+    }
+
+    .fc-bottom {
+        bottom: -6px;
+        left: 0;
+    }
+}

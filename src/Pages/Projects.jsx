@@ -56,8 +56,34 @@ function Projects() {
       ],
       status: "Completed",
       codeUrl: "https://github.com/nithees-sj/spell-checker-trie"
-    }
-  ];
+    },
+    {
+    id: 3,
+    title: "Amazon Prime Movies & TV Shows Analysis",
+    description:
+          "A data analytics project using Power BI to analyze movies and TV shows available on Amazon Prime Video, focusing on content trends, genres, ratings, and release patterns.",
+  features: [
+    "Interactive Power BI dashboard",
+    "Genre-wise analysis of movies and TV shows",
+    "Year-wise content release trends",
+    "Movies vs TV shows comparison",
+    "Country-wise content distribution",
+    "Rating and duration analysis",
+    "User-friendly visual insights for decision making"
+  ],
+  tech: [
+    "Power BI",
+    "Data Visualization",
+    "Data Cleaning",
+    "Data Analysis",
+    "Excel / CSV Dataset",
+    "Business Intelligence"
+  ],
+  status: "Completed",
+  category: "Data Analytics & Visualization",
+  codeUrl: "https://app.powerbi.com/groups/me/reports/86470ac1-ca67-436d-8237-a72b274c4847/fece990eb8d0975a7e45?experience=power-bi"
+}
+];
 
   const projectStats = [
     { label: "Projects Completed", value: "3", icon: "✅" },
@@ -162,7 +188,7 @@ function Projects() {
                     rel="noopener noreferrer"
                     className="rounded-lg border border-gray-900 px-5 py-2 text-sm font-semibold text-gray-900 transition hover:-translate-y-0.5 hover:bg-gray-900 hover:text-white hover:shadow-lg"
                   >
-                    View Code
+                    View work
                   </a>
                 </div>
               </div>

@@ -3,9 +3,8 @@ import profileImg from "../assets/Formal.png";
 
 function Home() {
   return (
-    <div className="fixed inset-0 z-0 flex h-screen w-screen items-center justify-center overflow-hidden bg-gradient-to-b from-white to-gray-50 hero">
-      <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden px-4 pt-16 pb-8 margin-fixer">
-
+    <div className="hero relative z-0 flex min-h-screen w-full items-center justify-center overflow-hidden bg-gradient-to-b from-white to-gray-50">
+      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden px-4 pt-28 pb-10 sm:pt-32 sm:pb-12">
         {/* Animated background */}
         <div className="pointer-events-none absolute inset-0 z-0">
           <div className="blob blue-1 b1"></div>
@@ -13,26 +12,32 @@ function Home() {
           <div className="blob gray b3"></div>
         </div>
 
-        <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center justify-items-center gap-12 lg:grid-cols-[1.2fr_0.8fr] hero-grid">
-
+        {/* Main Grid */}
+        <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center justify-items-center gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
           {/* LEFT CONTENT */}
-          <div className="max-w-xl text-center hero-copy">
-            <h1 className="mb-4 text-6xl font-extrabold leading-tight tracking-tight text-gray-900">
-              Hi, I'm{" "}
+          <div className="max-w-xl text-center lg:text-left">
+            <h1 className="mb-3 text-3xl sm:mb-4 sm:text-4xl lg:text-6xl font-extrabold leading-tight tracking-tight text-gray-900">
+              Hi, I&apos;m{" "}
               <span className="bg-gradient-to-br from-blue-600 to-blue-700 bg-clip-text text-transparent">
                 Nithees SJ
               </span>
             </h1>
 
-            <p className="mb-2 text-2xl font-medium text-gray-600">
+            <p className="mb-1 text-base sm:text-lg lg:text-2xl font-medium text-gray-600">
               Student at Kongu Engineering College, Perundurai
             </p>
-            <p className="mb-6 text-2xl font-medium text-gray-600">
-              AIML-UG
+            <p className="mb-4 sm:mb-6 text-base sm:text-lg lg:text-2xl font-medium text-gray-600">
+              AIML – UG
+            </p>
+
+            {/* Short intro for mobile */}
+            <p className="mb-6 max-w-xl text-sm sm:text-base text-gray-500 lg:text-gray-600 mx-auto lg:mx-0">
+              I love turning data into insights and ideas into polished digital
+              experiences — with a focus on clean design, clear logic, and real impact.
             </p>
 
             {/* Buttons */}
-            <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <div className="mt-3 sm:mt-4 flex flex-wrap justify-center lg:justify-start gap-3">
               {[
                 ["LinkedIn", "https://www.linkedin.com/in/nithees-s-j-524262366/"],
                 ["GitHub", "https://github.com/nithees-sj"],
@@ -44,31 +49,31 @@ function Home() {
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-lg bg-white px-5 py-2.5 text-sm font-medium text-gray-600 transition hover:-translate-y-0.5 hover:bg-gray-50 hover:text-gray-800 hover:shadow"
+                  className="rounded-lg bg-white px-5 py-2.5 text-sm sm:text-base font-medium text-gray-600 shadow-sm ring-1 ring-gray-200 transition hover:-translate-y-0.5 hover:bg-gray-50 hover:text-gray-800 hover:shadow-md"
                 >
                   {label}
                 </a>
               ))}
             </div>
 
-            {/* Tech badges */}
-            <div className="mt-10 flex flex-col gap-6">
-              <div className="flex flex-wrap justify-center gap-6">
+            {/* Tech Badges */}
+            <div className="mt-8 sm:mt-10 flex flex-col gap-4 sm:gap-5">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
                 {["🌐 HTML", "🎨 CSS", "🟨 JS", "🌬️ Tailwind"].map((tech) => (
                   <span
                     key={tech}
-                    className="flex items-center gap-2 rounded-full border border-gray-200 bg-white px-5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-gray-100"
+                    className="rounded-full border border-gray-200 bg-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-gray-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-gray-100"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
 
-              <div className="flex flex-wrap justify-center gap-6">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
                 {["⚛️ React", "🟢 Node", "🍃 MongoDB", "🐧 Linux"].map((tech) => (
                   <span
                     key={tech}
-                    className="flex items-center gap-2 rounded-full border border-gray-200 bg-white px-5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-gray-100"
+                    className="rounded-full border border-gray-200 bg-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-gray-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-gray-100"
                   >
                     {tech}
                   </span>
@@ -76,13 +81,13 @@ function Home() {
               </div>
             </div>
 
-            {/* Quick facts */}
-            <div className="mt-8 flex flex-wrap justify-center gap-2">
+            {/* Quick Facts */}
+            <div className="mt-7 sm:mt-8 flex flex-wrap justify-center lg:justify-start gap-3">
               {["🎯 Problem Solver", "🚀 Fast Learner", "💡 Creative Thinker"].map(
                 (fact) => (
                   <div
                     key={fact}
-                    className="flex h-12 w-40 items-center justify-center gap-1 rounded-xl bg-gray-50 px-2 text-sm font-semibold text-gray-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-gray-100"
+                    className="flex h-11 sm:h-12 w-40 sm:w-44 items-center justify-center rounded-xl bg-gray-50 px-3 text-xs sm:text-sm font-semibold text-gray-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-gray-100"
                   >
                     {fact}
                   </div>
@@ -91,9 +96,9 @@ function Home() {
             </div>
           </div>
 
-          {/* RIGHT CONTENT */}
-          <div className="relative flex items-center justify-center hero-visual">
-            <div className="relative h-[480px] w-[380px] overflow-hidden rounded-2xl border-2 border-gray-200 bg-gradient-to-br from-gray-100 to-white shadow-2xl transition hover:-translate-y-1 hover:shadow-3xl portrait">
+          {/* RIGHT CONTENT – IMAGE */}
+          <div className="relative mt-6 sm:mt-0 flex items-center justify-center">
+            <div className="relative h-[220px] w-[170px] sm:h-[260px] sm:w-[210px] lg:h-[420px] lg:w-[320px] overflow-hidden rounded-2xl border-2 border-gray-200 bg-gradient-to-br from-gray-100 to-white shadow-2xl transition hover:-translate-y-1">
               <img
                 src={profileImg}
                 alt="Nithees SJ"
@@ -101,112 +106,12 @@ function Home() {
               />
             </div>
 
-            <div className="float-card fc-top">✨ Data Analyst</div>
-            <div className="float-card fc-bottom">🔧 Problem Solver</div>
+            {/* Floating Cards */}
+            <div className="float-card fc-top hidden xs:flex sm:flex">✨ Data Analyst</div>
+            <div className="float-card fc-bottom hidden xs:flex sm:flex">🔧 Problem Solver</div>
           </div>
         </div>
       </div>
-
-      {/* ===== Custom animations & blobs ===== */}
-      <style jsx>{`
-        .hero::before {
-          content: "";
-          position: absolute;
-          inset: -20%;
-          background: conic-gradient(
-            from 0deg,
-            rgba(37,99,235,0.06),
-            rgba(99,102,241,0.04),
-            rgba(2,132,199,0.04),
-            rgba(17,24,39,0.05),
-            rgba(37,99,235,0.06)
-          );
-          filter: blur(30px);
-          animation: rotate-wash 60s linear infinite;
-        }
-
-        .blob {
-          position: absolute;
-          width: 38vmax;
-          height: 38vmax;
-          border-radius: 50%;
-          filter: blur(40px);
-          opacity: 0.18;
-        }
-
-        .blue-1 {
-          background: radial-gradient(circle, rgba(37,99,235,0.12), transparent);
-        }
-        .blue-2 {
-          background: radial-gradient(circle, rgba(2,132,199,0.12), transparent);
-        }
-        .gray {
-          background: radial-gradient(circle, rgba(17,24,39,0.1), transparent);
-        }
-
-        .b1 {
-          top: -10%;
-          left: -10%;
-          animation: blob1 50s infinite alternate;
-        }
-        .b2 {
-          bottom: -15%;
-          right: -15%;
-          animation: blob2 55s infinite alternate;
-        }
-        .b3 {
-          top: 30%;
-          left: 55%;
-          animation: blob3 60s infinite alternate;
-        }
-
-        .float-card {
-          position: absolute;
-          background: white;
-          border: 2px solid #e5e7eb;
-          padding: 10px 14px;
-          border-radius: 16px;
-          font-weight: 700;
-          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-          animation: float 6s ease-in-out infinite;
-        }
-
-        .fc-top {
-          top: -15px;
-          right: -15px;
-        }
-        .fc-bottom {
-          bottom: -15px;
-          left: -15px;
-          animation-delay: 1.5s;
-        }
-
-        @keyframes rotate-wash {
-          to {
-            transform: rotate(360deg) scale(1.05);
-          }
-        }
-        @keyframes float {
-          50% {
-            transform: translateY(-10px);
-          }
-        }
-        @keyframes blob1 {
-          to {
-            transform: translate(10%, 6%) rotate(20deg);
-          }
-        }
-        @keyframes blob2 {
-          to {
-            transform: translate(-8%, -10%) rotate(-20deg);
-          }
-        }
-        @keyframes blob3 {
-          to {
-            transform: translate(4%, -6%) rotate(24deg);
-          }
-        }
-      `}</style>
     </div>
   );
 }
