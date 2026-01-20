@@ -99,7 +99,7 @@ npm run lint
 - **LeetCode:** [nithees-sj](https://leetcode.com/u/nithees-sj/)
 - **Kaggle:** [nitheessj](https://www.kaggle.com/nitheessj)
 
-I'm always excited to connect with fellow developers, discuss AI/ML, or explore exciting projects. Feel free to reach out!
+I'm always excited to connect with fellow developers, discuss AI/ML, or explore exciting projects. Feel free to reach out...
 
 ## 📝 License
 
