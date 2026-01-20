@@ -103,7 +103,7 @@ I'm always excited to connect with fellow developers, discuss AI/ML, or explore 
 
 ## 📝 License
 
-This project is open source and available under the MIT License.
+This project is open source and available under the MIT Licenses.
 
 ---
 
