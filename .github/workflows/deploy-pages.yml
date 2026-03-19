@@ -34,7 +34,7 @@ jobs:
 
       - name: Set Build Environment
         run: |
-          if [ "${{ github.event.repository.name }}" = "${{ github.repository_owner }}.github.io" ]; then
+          if [ -f CNAME ] || [ "${{ github.event.repository.name }}" = "${{ github.repository_owner }}.github.io" ]; then
             BASE_PATH="/"
           else
             BASE_PATH="/${{ github.event.repository.name }}/"

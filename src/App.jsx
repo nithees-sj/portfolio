@@ -8,7 +8,7 @@ import Contact from './Pages/Contact';
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="min-h-screen bg-white">
         <Navbar />
         <Routes>
