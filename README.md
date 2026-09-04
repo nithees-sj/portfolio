@@ -1,110 +1,115 @@
-# Hi, I'm Nithees SJ 👋
+<div align="center">
 
-Welcome to my personal portfolio website! I'm an AIML Engineering student at **Kongu Engineering College, Perundurai**, passionate about building full-stack applications, solving real-world problems, and turning data into actionable insights.
+# Nithees SJ — Portfolio
 
-## 🚀 About Me
+**A portfolio built like the platform it describes.**
 
-I'm a **Data Analyst**, **Problem Solver**, and **Full-Stack Developer** with a strong foundation in:
-- **Web Development** - Building responsive, user-friendly applications
-- **Machine Learning & AI** - Creating intelligent solutions
-- **Data Analysis & Visualization** - Converting data into insights
+Platform Engineer · multi-cloud infrastructure, Kubernetes, and Helm
 
-I love turning ideas into polished digital experiences with clean design, clear logic, and real impact. Always eager to learn, collaborate, and tackle challenging problems!
+[![Stack](https://img.shields.io/badge/stack-vanilla%20HTML%2FCSS%2FJS-f7df1e?logo=javascript&logoColor=black)](#the-engineering)
+[![Build](https://img.shields.io/badge/build-not%20required-3ecf8e)](#run-it-locally)
 
-## 🛠️ Tech Stack
-
-### Frontend
-- React, HTML, CSS, JavaScript, Tailwind CSS
-
-### Backend & Databases
-- Node.js, Express.js, MongoDB, MySQL
-
-### Programming Languages
-- Python, Java, C
-
-### Tools & Platforms
-- Git, Figma, Power BI, Linux
-
-## 📋 Featured Projects
-
-### 1. Career Developer + Doubt Solver Pro
-A comprehensive platform combining career and learning features for students and professionals.
-- **Features:** Resume builder, Roadmap designer, Project ideas generator, Doubt solver with multi-format support, Summarizer, Quiz generator
-- **Tech:** React, Node.js, MongoDB, AI/ML, PDF & Video Processing
-- **Status:** Completed
-- **Code:** [GitHub](https://github.com/nithees-sj/novard-ai/)
-
-### 2. Spell Checker & Sentence Corrector using TRIE
-A console-based application using the TRIE data structure for intelligent spell checking with user authentication.
-- **Features:** Fast word lookup, User authentication, Word & sentence-level correction, Prefix-based search
-- **Tech:** Data Structures, TRIE, Algorithms, Authentication
-- **Status:** Completed
-- **Code:** [GitHub](https://github.com/nithees-sj/spell-checker-trie)
-
-### 3. Amazon Prime Movies & TV Shows Analysis
-An interactive Power BI dashboard analyzing content trends, genres, ratings, and distribution patterns.
-- **Features:** Genre analysis, Year-wise trends, Country distribution, Rating insights
-- **Tech:** Power BI, Data Visualization, Data Analysis, Business Intelligence
-- **Status:** Completed
-- **Dashboard:** [Power BI Report](https://app.powerbi.com/groups/me/reports/86470ac1-ca67-436d-8237-a72b274c4847/fece990eb8d0975a7e45?experience=power-bi)
-
-## 🌐 Pages
-
-- **Home** - Introduction and quick overview
-- **About** - Detailed skills, education, and journey
-- **Projects** - Showcase of my featured projects
-- **Contact** - Get in touch and connect
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
-
-### Installation
-
-```bash
-# Clone the repository
-git clone <repository-url>
-cd portfolio
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-Visit `http://localhost:5173` in your browser.
-
-## 📦 Build for Production
-
-```bash
-npm run build
-```
-
-The optimized files will be in the `dist` directory.
-
-## 🔍 Linting
-
-```bash
-npm run lint
-```
-
-## 📬 Connect With Me
-
-- **Email:** [nitheessj@gmail.com](mailto:nitheessj@gmail.com)
-- **LinkedIn:** [nithees-sj](https://www.linkedin.com/in/nithees-s-j-524262366/)
-- **GitHub:** [nithees-sj](https://github.com/nithees-sj)
-- **LeetCode:** [nithees-sj](https://leetcode.com/u/nithees-sj/)
-- **Kaggle:** [nitheessj](https://www.kaggle.com/nitheessj)
-
-I'm always excited to connect with fellow developers, discuss AI/ML, or explore exciting projects. Feel free to reach out...
-
-## 📝 License
-
-This project is open source and available under the MIT Licenses.
+</div>
 
 ---
 
-**Let's build something amazing together!** 🎉
+## 00 · The concept
+
+Every section speaks the language of delivery: the loader is a `helm upgrade --install`,
+the career history is a `git log`, the metrics are a `git diff --stat`, the skills are a
+tracked `stack.yaml`, the proof is an `ls -la`, and contact is a `ping`. The hero sky is
+live telemetry — the actual night sky over Bengaluru, right now.
+
+| # | Section | What it is |
+|---|---------|------------|
+| boot | Preloader | A Helm release — **Build → Test → Deploy → Release** — with progress ticker and status log |
+| 01 | `whoami` | Identity card with 3D tilt + scan effect, manifesto, three operating principles |
+| 02 | `git log --career` | Work history as release tags (`release/2025.07 — HEAD`) |
+| 02a | `git diff --stat` | The numbers: 4 clouds at parity, 20+ charts, 30-minute provisioning, ₹80K/mo saved |
+| 03 | `cat stack.yaml` | The toolchain as annotated YAML — hovering a card highlights its lines |
+| 04 | `ls -la proof/` | Open-source maintainer work, Helm Doctor, education |
+| 05 | `ping nithees` | Contact CTAs + terminal-style copy-to-clipboard email |
+
+## 01 · The details worth zooming into
+
+- **The hero sky is real.** A J2000 bright-star catalog (~70 stars, 15 constellations)
+  converted from equatorial to horizontal coordinates using local sidereal time for
+  12.9716° N, 77.5946° E — redrawn every 30 seconds, with a horizon compass and the
+  occasional meteor.
+- **A release, drawn live.** The hero git graph animates a feature branch through checks
+  to a `v2.0 · deployed` tag — hover a commit to see its hash on the cursor.
+- **Text decodes into place.** The name scrambles through glyphs and settles left-to-right.
+- **Two themes.** Light "day shift" by default, dark one click away — a pre-paint boot
+  script means zero flash, and the choice persists in `localStorage`.
+- **A custom cursor** that labels interactive elements with their action (`open`, `copy`, `send`).
+
+## 02 · The engineering
+
+No framework. No build step. No `node_modules`.
+
+| Layer | Choice |
+|-------|--------|
+| Markup | One semantic `index.html` |
+| Styles | One hand-written stylesheet — CSS custom properties power both themes |
+| Behavior | Three vanilla-JS files: `preloader.js`, `main.js`, `cursor.js` |
+| Motion | Lenis smooth scroll via CDN — the only external dependency |
+| Type | Space Grotesk + JetBrains Mono, self-hosted variable `woff2`, preloaded |
+| Hosting | GitHub Pages, straight from `main` |
+
+Accessibility and performance: `prefers-reduced-motion` honored throughout, canvas capped
+at device-pixel-ratio and paused on hidden tabs, `IntersectionObserver` reveals, passive
+listeners, skip-to-content link, ARIA roles, JSON-LD `Person`/`ProfilePage` graph, Open
+Graph + Twitter cards, `robots.txt` + `sitemap.xml`.
+
+## 03 · Repository layout
+
+```
+.
+├── index.html                # the entire site — one page
+├── CNAME                     # custom domain for GitHub Pages (nitheessj.me)
+├── .github/workflows/
+│   └── deploy.yml            # auto-deploy to GitHub Pages on push to main
+├── req/
+│   ├── css/styles.css        # tokens + every component, dark & light themes
+│   ├── js/
+│   │   ├── preloader.js      # boot sequence
+│   │   ├── main.js           # nav · theme · clock · reveals · star-map canvas
+│   │   └── cursor.js         # custom cursor with action labels
+│   ├── fonts/                # self-hosted variable fonts (woff2)
+│   └── img/                  # portrait + favicon set (incl. generator script)
+├── robots.txt
+└── sitemap.xml
+```
+
+## 04 · Run it locally
+
+```bash
+python3 -m http.server 8000    # or: npx serve
+```
+
+Open `http://localhost:8000`. (Serve rather than opening `index.html` directly so the
+self-hosted fonts load in every browser.)
+
+## 05 · Deployment
+
+Hosted on **GitHub Pages** with a custom domain (`nitheessj.me`).
+
+Every push to `main` triggers the [deploy workflow](.github/workflows/deploy.yml) via
+GitHub Actions, which publishes the static files automatically — no build step required.
+
+To deploy manually, go to **Actions → Deploy to GitHub Pages → Run workflow**.
+
+## 06 · Notes
+
+1. **Analytics** — none is wired up. Add your own IDs if you want them.
+2. **Open Graph preview** — re-check the card after any change to `req/img/profile.jpg`.
+
+## Credits
+
+Design and front-end architecture adapted from
+[aradhyapuneeth/aradhyapuneeth.github.io](https://github.com/aradhyapuneeth/aradhyapuneeth.github.io)
+(MIT). All content, copy, and assets here are my own.
+
+## License
+
+[MIT](LICENSE)

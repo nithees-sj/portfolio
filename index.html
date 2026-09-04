@@ -1,13 +1,877 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/profile.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nithees SJ | DevOps &amp; Platform Engineering, Multi-Cloud Infrastructure</title>
+<meta name="description"
+content="Software Development Engineer specializing in Platform Engineering, Multi-Cloud Infrastructure (AWS, GCP, Azure, OCI), Kubernetes, Helm, and Terraform/OpenTofu. Building self-serve developer platforms and cloud provisioning tooling in Go.">
+<meta name="keywords"
+content="Nithees SJ, Nithees, nitheessj, nithees-sj, Nithees SJ Platform Engineer, Nithees SJ DevOps, Nithees SJ Bengaluru, Nithees SJ portfolio, Nithees SJ LinkedIn, Nithees SJ GitHub, Platform Engineer, DevOps Engineer, Site Reliability Engineer, Cloud Infrastructure Engineer, Kubernetes, Helm, Helm Charts, Terraform, OpenTofu, Infrastructure as Code, Go, Golang, GoFr, AWS, GCP, Azure, OCI, Oracle Cloud Infrastructure, Multi-Cloud, Internal Developer Platform, Self-Serve Provisioning, GitHub Actions, CircleCI, Grafana, Prometheus, Loki, Mimir, Helm Doctor">
+<meta name="author" content="Nithees SJ">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#f2f5f2">
+<meta http-equiv="Cache-Control" content="max-age=86400, public">
+<script>
+/* Theme boot — runs before first paint so there is no flash.
+ * Light is the default; dark only when the visitor chose it. */
+(function () {
+  var t = null;
+  try { t = localStorage.getItem('theme'); } catch (e) {}
+  if (t !== 'light' && t !== 'dark') t = 'light';
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nithees SJ | DevOps Engineer">
+<meta property="og:description" content="Platform Engineer building self-serve multi-cloud infrastructure in Go, Terraform/OpenTofu, and Kubernetes.">
+<meta property="og:url" content="https://nitheessj.me">
+<meta property="og:site_name" content="Nithees SJ">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://nitheessj.me/req/img/profile.jpg">
+<meta property="og:image:alt" content="Nithees SJ — Platform Engineer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nithees SJ | DevOps Engineer">
+<meta name="twitter:description" content="Platform Engineer building self-serve multi-cloud infrastructure in Go, Terraform/OpenTofu, and Kubernetes.">
+<meta name="twitter:image" content="https://nitheessj.me/req/img/profile.jpg">
+<meta name="twitter:image:alt" content="Nithees SJ — Platform Engineer">
+<link rel="canonical" href="https://nitheessj.me">
+
+<!-- Verified profiles (rel=me identity + crawlable entity links) -->
+<link rel="me" href="https://linkedin.com/in/arunesh04">
+<link rel="me" href="https://github.com/nithees-sj">
+
+<link rel="icon" href="req/img/fav/favicon.svg?v=1" type="image/svg+xml">
+<link rel="icon" href="req/img/fav/favicon.ico?v=1" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="req/img/fav/favicon-32x32.png?v=1">
+<link rel="icon" type="image/png" sizes="16x16" href="req/img/fav/favicon-16x16.png?v=1">
+<link rel="apple-touch-icon" href="req/img/fav/apple-touch-icon.png?v=1">
+<link rel="manifest" href="req/img/fav/site.webmanifest?v=1">
+
+<link rel="preload" href="req/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="req/fonts/jetbrains-mono-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="req/css/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://nitheessj.me/#website",
+      "url": "https://nitheessj.me/",
+      "name": "Nithees SJ",
+      "alternateName": ["Nithees", "Nithees SJ Portfolio"],
+      "publisher": { "@id": "https://nitheessj.me/#person" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://nitheessj.me/#profilepage",
+      "url": "https://nitheessj.me/",
+      "name": "Nithees SJ | DevOps & Platform Engineering, Multi-Cloud Infrastructure",
+      "isPartOf": { "@id": "https://nitheessj.me/#website" },
+      "mainEntity": { "@id": "https://nitheessj.me/#person" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://nitheessj.me/#person",
+      "name": "Nithees SJ",
+      "alternateName": ["Nithees", "nitheessj", "nithees-sj"],
+      "givenName": "Nithees",
+      "familyName": "SJ",
+      "jobTitle": "Software Development Engineer II",
+      "url": "https://nitheessj.me",
+      "email": "mailto:nitheessj07@gmail.com",
+      "image": "https://nitheessj.me/req/img/profile.jpg",
+      "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressRegion": "Karnataka", "addressCountry": "IN" },
+      "alumniOf": "Kongu Engineering College",
+      "worksFor": { "@type": "Organization", "name": "ZopDev" },
+      "knowsAbout": [
+        "Platform Engineering", "Multi-Cloud Infrastructure", "Kubernetes", "Helm",
+        "Terraform", "OpenTofu", "Infrastructure as Code", "Go", "DevOps",
+        "Site Reliability Engineering", "AWS", "GCP", "Azure",
+        "Oracle Cloud Infrastructure", "Observability", "CI/CD"
+      ],
+      "sameAs": [
+        "https://linkedin.com/in/arunesh04",
+        "https://github.com/nithees-sj"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="is-loading">
+
+<!-- ═══ Preloader · CI/CD deploy sequence ═══ -->
+<div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Loading">
+  <div class="preloader__glow"></div>
+  <div class="preloader__scan"></div>
+  <div class="boot">
+    <div class="boot__cmd"><span class="prompt">nithees@prod</span> <span>:~$ helm upgrade --install portfolio ./nithees --atomic</span> <span class="caret"></span></div>
+
+    <div class="pipeline" aria-hidden="true">
+      <div class="pipeline__track"><span class="pipeline__fill"></span></div>
+
+      <div class="stage" data-stage="build">
+        <div class="stage__dot">
+          <svg class="default" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3-6 9 6 9M16 3l6 9-6 9M14 3l-4 18"/></svg>
+          <span class="spin"></span>
+          <svg class="stage__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <span class="stage__label">Build</span>
+      </div>
+
+      <div class="stage" data-stage="test">
+        <div class="stage__dot">
+          <svg class="default" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v6l-5 9a2 2 0 0 0 1.8 3h12.4A2 2 0 0 0 20 18l-5-9V3M8 3h8M8 14h8"/></svg>
+          <span class="spin"></span>
+          <svg class="stage__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <span class="stage__label">Test</span>
+      </div>
+
+      <div class="stage" data-stage="deploy">
+        <div class="stage__dot">
+          <svg class="default" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 16.5 3 3M9 15l-4.5 1.5M14 6l4 4M12.5 2.5 6 9l-2 5 5-2 6.5-6.5a3.5 3.5 0 0 0-3-3z"/><path d="M15 9a3.5 3.5 0 0 0-3-3"/></svg>
+          <span class="spin"></span>
+          <svg class="stage__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <span class="stage__label">Deploy</span>
+      </div>
+
+      <div class="stage" data-stage="release">
+        <div class="stage__dot">
+          <svg class="default" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="m3 7 9 5 9-5M12 12v10"/></svg>
+          <span class="spin"></span>
+          <svg class="stage__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <span class="stage__label">Release</span>
+      </div>
+    </div>
+
+    <div class="boot__foot">
+      <div class="boot__status"><span class="text-muted">›</span> initializing build environment<span class="text-muted">…</span></div>
+      <div class="boot__pct"><span class="n tnum">0</span><span class="s">%</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Ambient backdrop -->
+<div class="backdrop" aria-hidden="true">
+  <div class="backdrop__grid"></div>
+  <div class="backdrop__glow"></div>
+  <div class="backdrop__grain"></div>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ═══ Navigation ═══ -->
+<header class="site-header" id="siteHeader">
+  <nav class="nav" id="nav" aria-label="Primary">
+    <a class="brand" href="#hero" aria-label="Nithees SJ — home">
+      <span class="brand__mark">NS</span>
+      <span class="brand__name">Nithees&nbsp;SJ <span class="role">— DevOps Engineer</span></span>
+    </a>
+    <div class="nav__links" id="navLinks">
+      <a class="nav__link is-active" href="#hero">Home</a>
+      <a class="nav__link" href="#about">About</a>
+      <a class="nav__link" href="#work">Work</a>
+      <a class="nav__link" href="#stack">Stack</a>
+      <a class="nav__link" href="#built">Built</a>
+      <a class="nav__link" href="#contact">Contact</a>
+    </div>
+    <div class="nav__right">
+      <span class="nav__status" title="Local time · Bengaluru (IST)">
+        <span class="live"></span>online
+        <span class="clock tnum" data-clock>00:00:00</span>
+      </span>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" data-cursor="theme">
+        <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn btn--primary nav__cta magnetic" href="#contact" data-cursor="connect">Let's talk</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ═══ Hero ═══ -->
+<section class="hero" id="hero">
+  <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__intro">
+        <span class="eyebrow hero__eyebrow">DevOps Engineer</span>
+
+        <h1 class="hero__title hero__title--one" aria-label="Nithees SJ">
+          <span class="line"><span class="tone-fill" data-decode="NITHEES">NITHEES</span> <span class="tone-grad" data-decode="SJ">SJ</span><span class="blink" aria-hidden="true"></span></span>
+        </h1>
+
+        <p class="lead hero__lead">
+          I build the multi-cloud platform other engineers deploy on —
+          <span class="em">four clouds, one self-serve path</span>.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg magnetic" href="#contact" data-cursor="connect">
+            Let's connect
+            <svg class="btn__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="#work" data-cursor="open">
+            <svg class="btn__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+            View the work
+          </a>
+        </div>
+
+        <div class="status-strip" aria-label="Status">
+          <div class="stat">
+            <span class="stat__k">status</span>
+            <span class="stat__v live"><span class="dot"></span>operational</span>
+          </div>
+          <div class="stat">
+            <span class="stat__k">region</span>
+            <span class="stat__v">Bengaluru · IN</span>
+          </div>
+          <div class="stat">
+            <span class="stat__k">since</span>
+            <span class="stat__v">2024 · 2y+ uptime</span>
+          </div>
+          <div class="stat">
+            <span class="stat__k">local</span>
+            <span class="stat__v tnum" data-clock>00:00:00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Git graph — a release, drawn live · hover a commit for its hash -->
+      <div class="hero__graph" aria-hidden="true">
+        <svg class="git" viewBox="0 0 420 560" fill="none">
+          <!-- lines -->
+          <path class="g-line g-main"   d="M150 20 V 540" pathLength="1"/>
+          <path class="g-line g-branch" d="M150 120 C 150 168, 300 156, 300 204 V 356 C 300 404, 150 392, 150 440" pathLength="1"/>
+          <!-- deploy signal — a pulse rides the branch every few seconds -->
+          <path class="g-flow" d="M150 120 C 150 168, 300 156, 300 204 V 356 C 300 404, 150 392, 150 440" pathLength="1"/>
+
+          <!-- commits — each group is a fat hover target; the cursor shows the hash -->
+          <g class="g-commit" data-cursor="c0ffee1">
+            <circle class="g-hit" cx="150" cy="60" r="22"/>
+            <circle class="g-c g-c--main d1" cx="150" cy="60"  r="7" />
+            <text class="g-t g-t--dim d1" x="130" y="64"  text-anchor="end">main</text>
+          </g>
+          <g class="g-commit" data-cursor="fea7c1a">
+            <circle class="g-hit" cx="150" cy="120" r="22"/>
+            <circle class="g-c g-c--acc  d2" cx="150" cy="120" r="7" />
+            <text class="g-t d2" x="130" y="124" text-anchor="end">checkout -b feat/gcp</text>
+          </g>
+          <g class="g-commit" data-cursor="add5afe">
+            <circle class="g-hit" cx="300" cy="240" r="22"/>
+            <circle class="g-c g-c--acc  d3" cx="300" cy="240" r="7" />
+            <text class="g-t d3" x="320" y="244">+ modules/gcp/</text>
+          </g>
+          <g class="g-commit" data-cursor="5ecc0de">
+            <circle class="g-hit" cx="300" cy="320" r="22"/>
+            <circle class="g-c g-c--acc  d4" cx="300" cy="320" r="7" />
+            <text class="g-t g-t--acc d4" x="320" y="324">parity ✓ 4 clouds</text>
+          </g>
+          <g class="g-commit" data-cursor="decade00">
+            <circle class="g-hit" cx="150" cy="440" r="22"/>
+            <circle class="g-c g-c--acc  d5" cx="150" cy="440" r="7" />
+            <text class="g-t d5" x="130" y="444" text-anchor="end">merge → main</text>
+          </g>
+
+          <!-- HEAD + release tag -->
+          <g class="g-commit g-head" data-cursor="HEAD → v2.0">
+            <circle class="g-hit" cx="150" cy="505" r="26"/>
+            <circle class="g-c g-c--acc  d5" cx="150" cy="505" r="8" />
+            <circle class="g-ring" cx="150" cy="505" r="9" />
+            <g class="g-tag">
+              <g class="g-tag__in">
+                <rect x="174" y="491" width="142" height="28" rx="14"/>
+                <text x="245" y="509" text-anchor="middle">v2.0 · deployed</text>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <a class="scroll-cue" href="#about" aria-label="Scroll down" data-cursor="scroll">
+    <span class="txt">scroll</span>
+    <span class="rail"></span>
+  </a>
+</section>
+
+
+<!-- ═══ Marquee bridge ═══ -->
+<div class="marquee" aria-label="Platform engineering ecosystem">
+  <div class="marquee__track" id="marqueeTrack">
+    <span class="marquee__item"><span class="d"></span>Platform Engineering</span>
+    <span class="marquee__item"><span class="d"></span>Kubernetes</span>
+    <span class="marquee__item"><span class="d"></span>Helm</span>
+    <span class="marquee__item"><span class="d"></span>Terraform</span>
+    <span class="marquee__item"><span class="d"></span>OpenTofu</span>
+    <span class="marquee__item"><span class="d"></span>Go</span>
+    <span class="marquee__item"><span class="d"></span>Multi-Cloud</span>
+    <span class="marquee__item"><span class="d"></span>Infrastructure as Code</span>
+    <span class="marquee__item"><span class="d"></span>AWS</span>
+    <span class="marquee__item"><span class="d"></span>GCP</span>
+    <span class="marquee__item"><span class="d"></span>Azure</span>
+    <span class="marquee__item"><span class="d"></span>OCI</span>
+    <span class="marquee__item"><span class="d"></span>Helm Charts</span>
+    <span class="marquee__item"><span class="d"></span>Internal Developer Platform</span>
+    <span class="marquee__item"><span class="d"></span>Self-Serve Provisioning</span>
+    <span class="marquee__item"><span class="d"></span>GitHub Actions</span>
+    <span class="marquee__item"><span class="d"></span>CircleCI</span>
+    <span class="marquee__item"><span class="d"></span>Docker</span>
+    <span class="marquee__item"><span class="d"></span>GoFr</span>
+    <span class="marquee__item"><span class="d"></span>REST APIs</span>
+    <span class="marquee__item"><span class="d"></span>Microservices</span>
+    <span class="marquee__item"><span class="d"></span>Redis</span>
+    <span class="marquee__item"><span class="d"></span>Grafana</span>
+    <span class="marquee__item"><span class="d"></span>Prometheus</span>
+    <span class="marquee__item"><span class="d"></span>Loki</span>
+    <span class="marquee__item"><span class="d"></span>Mimir</span>
+    <span class="marquee__item"><span class="d"></span>Observability</span>
+    <span class="marquee__item"><span class="d"></span>CI/CD</span>
+    <span class="marquee__item"><span class="d"></span>DevOps</span>
+    <span class="marquee__item"><span class="d"></span>Site Reliability Engineering</span>
+    <span class="marquee__item"><span class="d"></span>Cloud Cost Optimization</span>
+    <span class="marquee__item"><span class="d"></span>Values Schema</span>
+    <span class="marquee__item"><span class="d"></span>CEL</span>
+    <span class="marquee__item"><span class="d"></span>Production Readiness</span>
+    <span class="marquee__item"><span class="d"></span>Release Engineering</span>
+    <span class="marquee__item"><span class="d"></span>Python</span>
+    <span class="marquee__item"><span class="d"></span>Bash</span>
+    <span class="marquee__item"><span class="d"></span>Linux</span>
+    <span class="marquee__item"><span class="d"></span>Git</span>
+    <span class="marquee__item"><span class="d"></span>SQL</span>
+    <span class="marquee__item"><span class="d"></span>Vertex AI</span>
+    <span class="marquee__item"><span class="d"></span>AWS Bedrock</span>
+    <span class="marquee__item"><span class="d"></span>ONNX</span>
+    <span class="marquee__item"><span class="d"></span>GKE</span>
+    <span class="marquee__item"><span class="d"></span>Managed Databases</span>
+    <span class="marquee__item"><span class="d"></span>Networking</span>
+    <span class="marquee__item"><span class="d"></span>Incident Response</span>
+    <span class="marquee__item"><span class="d"></span>Configuration Drift</span>
+    <span class="marquee__item"><span class="d"></span>Open Source</span>
+  </div>
+</div>
+
+
+<!-- ═══ 01 · whoami ═══ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about__grid">
+
+      <!-- identity card -->
+      <aside class="idcard" data-reveal="left">
+        <div class="idcard__head">
+          <span>identity.card</span>
+          <span class="on">verified</span>
+        </div>
+        <div class="idcard__photo">
+          <img src="req/img/profile.webp" alt="Nithees SJ" width="1254" height="1280" loading="lazy">
+          <span class="idcard__scan"></span>
+        </div>
+        <div class="idcard__meta">
+          <div class="idcard__row"><span class="k">uid</span><span class="v">nithees-sj</span></div>
+          <div class="idcard__row"><span class="k">role</span><span class="v">sde ii · platform</span></div>
+          <div class="idcard__row"><span class="k">base</span><span class="v">12.9716° N · 77.5946° E</span></div>
+          <div class="idcard__row"><span class="k">tz</span><span class="v">IST · UTC+05:30</span></div>
+          <div class="idcard__row"><span class="k">exp</span><span class="v">2y+ · since 2024</span></div>
+          <div class="idcard__row"><span class="k">status</span><span class="v acc">● operational</span></div>
+        </div>
+      </aside>
+
+      <!-- manifesto -->
+      <div class="about__body">
+        <div class="section-head">
+          <span class="eyebrow" data-reveal><span class="idx">01</span> — whoami</span>
+          <h2 data-reveal>A platform is a product.<br>I ship it like one.</h2>
+        </div>
+        <p class="lead-big" data-reveal>
+          Two years collapsing cloud setup into a 30-minute, self-serve path:
+          <span class="dim">pick a cloud, click install, it is running.</span>
+        </p>
+        <p data-reveal>
+          I build <span class="hl">multi-cloud infrastructure and self-serve developer platforms</span>
+          in Go, Terraform/OpenTofu, and Kubernetes — the OpenTofu modules and Helm
+          chart catalog behind zop.dev's self-serve provisioning on AWS, GCP, Azure,
+          and OCI, all four at feature parity.
+        </p>        
+        <p data-reveal>
+          The throughline: <span class="hl">if a user has to hand-write YAML or read a
+          template, the platform is not finished.</span> Same instinct behind Helm Doctor,
+          which grades any chart's production-readiness A–F on a deterministic rule engine.
+        </p>
+
+        <div class="ops-principles" data-stagger>
+          <article class="principle">
+            <span class="principle__n">01</span>
+            <h3>Self-serve by default</h3>
+            <p>Ship a values schema and an install button, not a template and a wiki page.</p>
+          </article>
+          <article class="principle">
+            <span class="principle__n">02</span>
+            <h3>Parity, not exceptions</h3>
+            <p>A cloud is supported when every module behaves exactly as it does on the other three.</p>
+          </article>
+          <article class="principle">
+            <span class="principle__n">03</span>
+            <h3>Deterministic over clever</h3>
+            <p>Rules that grade identically every run beat heuristics that are usually right.</p>
+          </article>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ═══ 02 · Work — release log ═══ -->
+<section class="section" id="work">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="eyebrow" data-reveal>
+        <span class="idx">02</span> — git log --career
+      </span>
+      <h2 data-reveal>Deployment history.</h2>
+    </div>
+
+    <div class="timeline" data-reveal>
+
+      <!-- ZopDev · SDE II -->
+      <article class="release" data-reveal>
+        <div class="release__aside">
+          <span class="release__tag">release/2026.04 — HEAD</span>
+          <h3 class="release__co">ZopDev</h3>
+          <p class="release__period">Apr 2026 → present</p>
+        </div>
+
+        <div class="release__main">
+
+          <h4 class="release__role">
+            Software Development Engineer II
+            <span class="now">now</span>
+          </h4>
+
+          <p class="release__sum">
+            Ship <span class="hl">provisioning and deployment features for a self-serve cloud
+            platform</span> — users set up compute, managed Kubernetes, and databases, connect a
+            GitHub repository, and reach production in under 30 minutes from the UI. Collaborate
+            with the platform team on cloud cost-optimization: scheduling idle non-production
+            resources to power down, right-sizing recommendations from utilization data, and
+            reclaiming orphaned resources. Also manage a multi-tenant managed hosting offering
+            where a GitHub URL or container image becomes a live, TLS-secured endpoint in
+            <span class="hl">~5 minutes</span>.
+          </p>
+
+          <div class="release__chips" data-stagger>
+            <span class="kchip"><span class="d"></span>Kubernetes</span>
+            <span class="kchip"><span class="d"></span>Go</span>
+            <span class="kchip"><span class="d"></span>Helm</span>
+            <span class="kchip"><span class="d"></span>Multi-Tenancy</span>
+            <span class="kchip"><span class="d"></span>FinOps</span>
+            <span class="kchip"><span class="d"></span>Cost Optimization</span>
+            <span class="kchip"><span class="d"></span>TLS</span>
+            <span class="kchip"><span class="d"></span>GitHub</span>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- ZopDev · SDE I -->
+      <article class="release release--past" data-reveal>
+        <div class="release__aside">
+          <span class="release__tag">release/2025.07</span>
+          <h3 class="release__co">ZopDev</h3>
+          <p class="release__period">Jul 2025 → Mar 2026 · 9m</p>
+        </div>
+
+        <div class="release__main">
+
+          <h4 class="release__role">
+            Software Development Engineer I
+          </h4>
+
+          <p class="release__sum">
+            Delivered <span class="hl">OCI end-to-end</span> — networking, Kubernetes, and managed
+            databases — at full feature parity with AWS, GCP, and Azure, and owned the OpenTofu
+            modules and Helm charts behind self-serve provisioning. Built a standalone Go
+            microservice that auto-tags cloud resources using ONNX models trained on resource
+            metadata, with a human-in-the-loop feedback cycle driving continuous retraining.
+            Provided DevOps support for a multi-tenant e-commerce platform on GCP, cutting cloud
+            spend by <span class="hl">~₹80K/month</span>.
+          </p>
+
+          <div class="release__chips" data-stagger>
+            <span class="kchip"><span class="d"></span>OCI</span>
+            <span class="kchip"><span class="d"></span>OpenTofu</span>
+            <span class="kchip"><span class="d"></span>Helm</span>
+            <span class="kchip"><span class="d"></span>GCP</span>
+            <span class="kchip"><span class="d"></span>Go</span>
+            <span class="kchip"><span class="d"></span>ONNX</span>
+            <span class="kchip"><span class="d"></span>Observability</span>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- ZopSmart -->
+      <article class="release release--past" data-reveal>
+        <div class="release__aside">
+          <span class="release__tag">release/2024.07</span>
+          <h3 class="release__co">ZopSmart</h3>
+          <p class="release__period">Jul 2024 → Jun 2025 · 1y</p>
+        </div>
+
+        <div class="release__main">
+
+          <h4 class="release__role">
+            Software Development Engineer <span class="dim">· Intern</span>
+          </h4>
+
+          <p class="release__sum">
+            Built the reusable Terraform/OpenTofu modules that let zop.dev users
+            <span class="hl">stand up an entire cloud account in ~30 minutes</span> —
+            networking, compute, databases, and services — replacing module-by-module
+            manual setup. Authored and maintained 20+ production Helm charts, each with
+            a values schema for single-click install.
+          </p>
+
+          <div class="release__chips" data-stagger>
+            <span class="kchip"><span class="d"></span>Terraform</span>
+            <span class="kchip"><span class="d"></span>OpenTofu</span>
+            <span class="kchip"><span class="d"></span>Helm Charts</span>
+            <span class="kchip"><span class="d"></span>Values Schema</span>
+            <span class="kchip"><span class="d"></span>AWS</span>
+            <span class="kchip"><span class="d"></span>GCP</span>
+            <span class="kchip"><span class="d"></span>Azure</span>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- Centillion Labs -->
+      <article class="release release--past" data-reveal>
+        <div class="release__aside">
+          <span class="release__tag">release/2023.10</span>
+          <h3 class="release__co">Centillion Labs</h3>
+          <p class="release__period">Oct 2023 → Mar 2024 · 6m</p>
+        </div>
+
+        <div class="release__main">
+
+          <h4 class="release__role">
+            Platform Engineer <span class="dim">· Intern</span>
+          </h4>
+
+          <p class="release__sum">
+            Architected the Terraform infrastructure-as-code baseline for a fintech client
+            across AWS and GKE, <span class="hl">bringing dev, staging, and production live
+            in ~1 hour</span>, with CircleCI pipelines running automated checks on every
+            deployment. Shipped a production AI chatbot on Vertex AI and Bedrock.
+          </p>
+
+          <div class="release__chips" data-stagger>
+            <span class="kchip"><span class="d"></span>Terraform</span>
+            <span class="kchip"><span class="d"></span>GKE</span>
+            <span class="kchip"><span class="d"></span>CircleCI</span>
+            <span class="kchip"><span class="d"></span>AWS</span>
+            <span class="kchip"><span class="d"></span>Vertex AI</span>
+            <span class="kchip"><span class="d"></span>AWS Bedrock</span>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- Jeonbuk National University -->
+      <article class="release release--past" data-reveal>
+        <div class="release__aside">
+          <span class="release__tag">release/2023.03</span>
+          <h3 class="release__co">Jeonbuk National University</h3>
+          <p class="release__period">Mar 2023 → Sep 2023 · 7m</p>
+        </div>
+
+        <div class="release__main">
+
+          <h4 class="release__role">
+            Deep Learning Engineer <span class="dim">· Intern · Remote</span>
+          </h4>
+
+          <p class="release__sum">
+            Trained GAN models for facial prediction, improving image fidelity through
+            iterative architecture tuning and systematic data preprocessing. Automated the
+            training and code-execution workflows with shell scripting,
+            <span class="hl">cutting a full fine-tuning run to ~1 hour</span> and making
+            experiments reproducible across the research team.
+          </p>
+
+          <div class="release__chips" data-stagger>
+            <span class="kchip"><span class="d"></span>Python</span>
+            <span class="kchip"><span class="d"></span>GANs</span>
+            <span class="kchip"><span class="d"></span>Bash</span>
+            <span class="kchip"><span class="d"></span>Reproducibility</span>
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Selected outcomes — numbered stat strip -->
+
+    <div class="impact-strip" data-reveal>
+
+      <span class="eyebrow">
+        <span class="idx">02a</span> — git diff --stat
+      </span>
+
+      <h3 class="impact-title">The work, diffed.</h3>
+
+      <p class="impact-sub">Two years of commits, squashed into numbers.</p>
+
+      <div class="impact-grid" data-stagger>
+
+        <article class="impact-stat">
+          <strong class="impact-stat__n">4</strong>
+          <span class="impact-stat__l">Clouds at feature parity</span>
+        </article>
+
+        <article class="impact-stat">
+          <strong class="impact-stat__n">20<span>+</span></strong>
+          <span class="impact-stat__l">Production Helm charts shipped</span>
+        </article>
+
+        <article class="impact-stat">
+          <strong class="impact-stat__n">30<span>m</span></strong>
+          <span class="impact-stat__l">Cloud account to running services</span>
+        </article>
+
+        <article class="impact-stat">
+          <strong class="impact-stat__n">80<span>K</span></strong>
+          <span class="impact-stat__l">₹/month cloud spend removed</span>
+        </article>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ 03 · Stack — spec sheet ═══ -->
+<section class="section" id="stack">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-reveal><span class="idx">03</span> — cat stack.yaml</span>
+      <h2 data-reveal>The toolchain, declared.</h2>
+    </div>
+
+    <div class="stack-stage" data-reveal>
+      <div class="stack-stage__copy">
+        <span class="stack-stage__label">production toolkit</span>
+        <p>Built shipping multi-cloud provisioning and production Helm charts that other engineers deploy on every day.</p>
+      </div>
+
+      <div class="stack-stage__surface">
+        <figure class="spec spec--peek">
+          <figcaption>
+            <span class="d"></span>
+            <span class="path">infra/</span>stack.yaml
+            <span class="path">· tracked · drift checked</span>
+            <span class="spec__hint">hover a card ↓</span>
+          </figcaption>
+          <span class="spec__scan" aria-hidden="true"></span>
+          <div class="spec__mask">
+            <pre data-stagger><span class="ln"><span class="no">1</span><span><span class="k">stack</span><span class="p">:</span></span></span><span class="ln"><span class="no">2</span><span>  <span class="k">languages</span><span class="p">:</span>     <span class="p">[</span><span class="v">go</span><span class="p">,</span> <span class="v">python</span><span class="p">,</span> <span class="v">bash</span><span class="p">,</span> <span class="v">sql</span><span class="p">]</span></span></span><span class="ln"><span class="no">3</span><span>  <span class="k">iac</span><span class="p">:</span>           <span class="p">[</span><span class="v">terraform</span><span class="p">,</span> <span class="v">opentofu</span><span class="p">]</span></span></span><span class="ln"><span class="no">4</span><span>  <span class="k">orchestration</span><span class="p">:</span> <span class="p">[</span><span class="v">kubernetes</span><span class="p">,</span> <span class="v">docker</span><span class="p">,</span> <span class="v">helm</span><span class="p">]</span></span></span><span class="ln"><span class="no">5</span><span>  <span class="k">cloud</span><span class="p">:</span>         <span class="p">[</span><span class="v">aws</span><span class="p">,</span> <span class="v">gcp</span><span class="p">,</span> <span class="v">azure</span><span class="p">,</span> <span class="v">oci</span><span class="p">]</span></span></span><span class="ln"><span class="no">6</span><span>  <span class="k">delivery</span><span class="p">:</span>      <span class="p">[</span><span class="v">github-actions</span><span class="p">,</span> <span class="v">circleci</span><span class="p">]</span></span></span><span class="ln"><span class="no">7</span><span>  <span class="k">backend</span><span class="p">:</span>       <span class="p">[</span><span class="v">gofr</span><span class="p">,</span> <span class="v">rest-apis</span><span class="p">,</span> <span class="v">microservices</span><span class="p">,</span> <span class="v">redis</span><span class="p">]</span></span></span><span class="ln"><span class="no">8</span><span>  <span class="k">observability</span><span class="p">:</span> <span class="p">[</span><span class="v">grafana</span><span class="p">,</span> <span class="v">prometheus</span><span class="p">,</span> <span class="v">mimir</span><span class="p">,</span> <span class="v">loki</span><span class="p">]</span></span></span><span class="ln"><span class="no">9</span><span>  <span class="k">ai-ml</span><span class="p">:</span>         <span class="p">[</span><span class="v">vertex-ai</span><span class="p">,</span> <span class="v">bedrock</span><span class="p">,</span> <span class="v">onnx</span><span class="p">]</span></span></span><span class="ln"><span class="no">10</span><span>  <span class="k">tooling</span><span class="p">:</span>       <span class="p">[</span><span class="v">linux</span><span class="p">,</span> <span class="v">git</span><span class="p">,</span> <span class="v">github</span><span class="p">]</span></span></span><span class="ln"><span class="no">11</span><span></span></span><span class="ln"><span class="no">12</span><span><span class="k">mode</span><span class="p">:</span> <span class="v">ship_the_platform</span>  <span class="c"># self-serve • four clouds • zero hand-written YAML</span><span class="cursor-line"></span></span></span></pre>
+          </div>
+        </figure>
+
+        <div class="stack-cards" data-stagger>
+          <article class="stack-card" data-keys="iac,cloud">
+            <span class="stack-card__k">provision</span>
+            <strong>IaC &amp; Multi-Cloud</strong>
+            <p>Terraform, OpenTofu, AWS, GCP, Azure, OCI</p>
+          </article>
+
+          <article class="stack-card" data-keys="orchestration,delivery">
+            <span class="stack-card__k">ship</span>
+            <strong>Kubernetes &amp; Delivery</strong>
+            <p>Kubernetes, Helm, Docker, GitHub Actions, CircleCI</p>
+          </article>
+
+          <article class="stack-card" data-keys="backend,observability">
+            <span class="stack-card__k">run</span>
+            <strong>Backend &amp; Observability</strong>
+            <p>Go, GoFr, Redis, Grafana, Prometheus, Loki, Mimir</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 04 · Built ═══ -->
+<section class="section" id="built">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-reveal><span class="idx">04</span> — git remote -v</span>
+      <h2 data-reveal>Shipped, not claimed.</h2>
+    </div>
+
+    <div class="credgroup">
+      <div class="credgroup__label" data-reveal>open source · maintainer</div>
+      <div data-stagger>
+        <a class="crow" href="https://github.com/zopdev/helm-charts" target="_blank" rel="noopener" data-cursor="open">
+          <span class="crow__issuer">zopdev</span>
+          <span class="crow__name">helm-charts — 20+ production charts with values schemas for single-click install</span>
+          <span class="crow__dates">maintainer · ★ 1.0k</span>
+          <span class="crow__go">open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+        </a>
+        <a class="crow" href="https://github.com/zopdev/opentofu-modules" target="_blank" rel="noopener" data-cursor="open">
+          <span class="crow__issuer">zopdev</span>
+          <span class="crow__name">opentofu-modules — networking, compute, databases across AWS, GCP, Azure, OCI</span>
+          <span class="crow__dates">maintainer · ★ 877</span>
+          <span class="crow__go">open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+        </a>
+        <a class="crow" href="https://github.com/stackshy/cloudemu" target="_blank" rel="noopener" data-cursor="open">
+          <span class="crow__issuer">stackshy</span>
+          <span class="crow__name">cloudemu — simulates real AWS, Azure, and GCP resources in-memory, on your machine</span>
+          <span class="crow__dates">contributor · ★ 142</span>
+          <span class="crow__go">open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="credgroup">
+      <div class="credgroup__label" data-reveal>project · helm doctor</div>
+
+      <div class="hdf" data-reveal>
+        <div class="hdf__copy">
+          <span class="hdf__eyebrow"><span class="d"></span>live · free · nothing stored</span>
+          <h3 class="hdf__title">Your Helm chart,<br><span class="grad">examined &amp; cured.</span></h3>
+          <p class="hdf__lead">
+            Grades any Helm chart <span class="hl">A–F for production-readiness</span> across
+            Security, Reliability, and Upgradeability — then writes the exact YAML fix for
+            every finding. Charts are fully rendered, exactly as Kubernetes would deploy
+            them, then checked against 50 deterministic rules.
+          </p>
+
+          <ul class="hdf__points">
+            <li><strong>50-check rule engine</strong><span>Declarative CEL expressions plus Go rules. Same chart, same values, same grade — every run, typically under 150&nbsp;ms.</span></li>
+            <li><strong>Guided chart builder</strong><span>Describe a workload or paste a docker-compose file, and download a chart born with a clean bill of health — live-graded as you configure.</span></li>
+            <li><strong>Values-aware grading</strong><span>Supply your production values.yaml and get graded on what you would actually deploy. Helm test hooks excluded, so they never drag the grade down.</span></li>
+          </ul>
+
+          <div class="hdf__actions">
+            <a class="btn btn--primary magnetic" href="https://helm-doctor.nitheessj.me" target="_blank" rel="noopener" data-cursor="visit">
+              Try it live
+              <svg class="btn__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </a>
+            <span class="hdf__meta">Go · Helm SDK · cel-go · GoFr · React · MySQL</span>
+          </div>
+        </div>
+
+        <figure class="hdf__shot">
+          <figcaption>
+            <span class="d"></span>
+            <span class="path">helm-doctor.nitheessj.me</span>
+            <span class="path">· report card</span>
+          </figcaption>
+          <div class="hdf__frame">
+            <img src="req/img/helm-doctor-card.webp" alt="Helm Doctor report card grading bitnami/postgresql at B+, 84 out of 100, with per-check pass, warn, and fail results" width="1080" height="884" loading="lazy">
+          </div>
+        </figure>
+      </div>
+    </div>
+
+    <div class="credgroup" style="margin-bottom:0">
+      <div class="credgroup__label" data-reveal>education</div>
+      <div class="edu" data-reveal>
+        <span class="edu__ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5zM6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5M22 10v6"/></svg>
+        </span>
+        <div>
+          <div class="edu__deg">B.Tech · CGPA 8.64 / 10</div>
+          <div class="edu__field">Artificial Intelligence &amp; Data Science</div>
+          <div class="edu__school">Kongu Engineering College, Erode, Tamil Nadu</div>
+        </div>
+        <span class="edu__years">2021 → 2025</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 05 · Contact ═══ -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <span class="eyebrow" data-reveal><span class="idx">05</span> — ping nithees</span>
+    <h2 class="contact__title" data-reveal>Let's connect<br><span class="grad">and talk shop.</span></h2>
+    <p class="contact__sub" data-reveal>Happy to talk clouds, Kubernetes, Helm, or the provisioning path your team keeps doing by hand. Always up for a good infrastructure conversation.</p>
+
+    <div class="contact__actions" data-reveal>
+      <a class="btn btn--primary btn--lg magnetic" href="mailto:nitheessj07@gmail.com" data-cursor="send">
+        Email me
+        <svg class="btn__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn--ghost btn--lg" href="https://linkedin.com/in/arunesh04" target="_blank" rel="noopener" data-cursor="open">
+        <svg class="btn__ico" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13M7.12 20.45H3.56V9h3.56z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+
+    <div data-reveal>
+      <button class="copyline" id="copyEmail" data-copy="nitheessj07@gmail.com" data-cursor="copy" type="button" aria-live="polite">
+        <span class="p">$</span>
+        <span class="addr">echo nitheessj07@gmail.com | clip</span>
+        <span class="ok">✓ copied to clipboard</span>
+      </button>
+    </div>
+
+    <div class="contact__meta" data-reveal style="margin-top:2.2rem">
+      <span>base: Bengaluru, Karnataka, IN</span>
+      <a href="https://www.google.com/maps?q=Bengaluru,Karnataka,India" target="_blank" rel="noopener" data-cursor="map">12.9716° N · 77.5946° E ↗</a>
+      <span>tz: IST · UTC+05:30</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══ Footer ═══ -->
+<footer class="site-footer">
+  <div class="container footer__row">
+    <a class="footer__brand" href="#hero" data-cursor="top">
+      <span class="brand__mark">NS</span> Nithees SJ
+    </a>
+    <span class="footer__mono">© 2026 · deployed from Bengaluru · status: <span class="text-accent">operational</span></span>
+    <div class="footer__links">
+      <a href="https://linkedin.com/in/arunesh04" target="_blank" rel="noopener" data-cursor="open">LinkedIn</a>
+      <a href="https://github.com/nithees-sj" target="_blank" rel="noopener" data-cursor="open">GitHub</a>
+      <a href="https://helm-doctor.nitheessj.me" target="_blank" rel="noopener" data-cursor="open">Helm Doctor</a>
+      <a href="mailto:nitheessj07@gmail.com" data-cursor="send">Email</a>
+      <a href="#hero" data-cursor="top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+<script src="req/js/preloader.js" defer></script>
+<script src="req/js/main.js" defer></script>
+<script src="req/js/cursor.js" defer></script>
+</body>
 </html>
