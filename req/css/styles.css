@@ -1166,13 +1166,13 @@ body.has-cursor .cursor.is-visible { opacity: 1; }
 .crow::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--accent); transform: scaleY(0); transition: transform var(--dur-3) var(--ease-out); }
 .crow:hover { background: var(--surface); }
 .crow:hover::before { transform: scaleY(1); }
-.crow__issuer { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); }
-.crow__name { font-weight: 600; font-size: 0.98rem; letter-spacing: -0.01em; }
-.crow__dates { font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-muted); white-space: nowrap; transition: color var(--dur-2) var(--ease-out); }
+.crow__issuer { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); }
+.crow__name { font-weight: 600; font-size: 1.18rem; letter-spacing: -0.01em; }
+.crow__dates { font-family: var(--font-mono); font-size: 0.82rem; color: var(--ink-muted); white-space: nowrap; transition: color var(--dur-2) var(--ease-out); }
 .crow:hover .crow__dates { color: var(--ink-soft); }
 .crow:hover .crow__name { color: var(--accent-bright); }
 .crow__name { transition: color var(--dur-2) var(--ease-out); }
-.crow__go { display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; color: var(--accent); text-transform: uppercase; }
+.crow__go { display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--font-mono); font-size: 0.82rem; letter-spacing: 0.06em; color: var(--accent); text-transform: uppercase; }
 .crow__go svg { width: 13px; height: 13px; transition: transform var(--dur-2) var(--ease-out); }
 .crow:hover .crow__go svg { transform: translate(2px, -2px); }
 
